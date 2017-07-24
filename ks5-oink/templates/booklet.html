@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title tal:content="string:Maths Assessment Booklet for ${scheme_title}"
+	   >Maths Assessment Booklet</title>
+
+    <style type="text/css" media="print">
+      @page {
+      margin: 0cm;
+      padding: 0cm;
+      }
+
+      body {
+      font-size: 12pt;
+      }
+
+      body * {
+      font-family: serif;
+      }
+
+      /* The front page */
+
+      .cover {
+      page-break-after: always;
+      }
+
+      .cover h1 {
+      font-size: 800%;
+      text-align: center;
+      color: #666;
+      padding: 0em;
+      margin: 0.1em;
+      }
+
+      .cover h2 {
+      text-align: center;
+      margin: 1em;
+      padding: 0em;
+      }
+
+      .cover .header {
+      text-align: center;
+      padding: 2em;
+      margin: 2em;
+      width: auto;
+      border: 1px solid #555;
+      }
+
+      .setlogos {
+      text-align: center;
+      margin: 0em 0em 5em 0em;
+      }
+
+      .coverlabel {
+      clear: both;
+      margin: 1ex 3ex;
+      padding: 0.5ex 20em 0.5ex 0.5ex;
+      font-size: 150%;
+      color: #333;
+      border-bottom: 0.1ex solid #666;
+      }
+
+      .coverlabel .label {
+      float:right;
+      font-weight: bold;
+      text-align: right;
+      }
+
+      /* Back page */
+
+      .back {
+      text-align: center;
+      }
+
+      .back img {
+      margin: 5em auto;
+      }
+
+
+    </style>
+
+    <style type="text/css" media="all">
+
+      @page {margin: 0cm;}
+
+      body, div {margin: 0ex; padding: 0ex;}
+
+      table {
+      border-collapse: collapse;
+      empty-cells: show;
+      }
+
+      .mylevel {
+      font-size: 150%;
+      float: right;
+      padding-right: 5ex;
+      margin: 1ex;
+      border-bottom: 1px solid #222;
+      }
+
+      .halfterm {
+      padding: 1em;
+      margin: 1em;
+      page-break-after: always;
+      }
+
+      .end {clear: both;}
+
+      .halfterm h2 {
+      border-bottom: 1px solid #666;
+      text-align: center;
+      margin: 0.5ex 0ex 1ex 0ex;
+      padding: 0.1ex;
+      }
+
+      .halfterm h3 {
+      margin: 0.2ex 0ex;
+      color: #222;
+      }
+
+      table,
+      tr,
+      tbody,
+      thead {
+      padding: 0ex;
+      margin: 0ex;
+      }
+
+      table.sa {
+      width: 100%;
+      margin: 0em auto;
+      empty-cells: show;
+      }
+
+      div#ht5-p1 {
+      page-break-after: always;
+      }
+
+      div#ht5-p2 {
+      padding-top: 2em;
+      }
+
+      table.sa td,
+      table.sa th {
+      margin: 0ex;
+      padding: 0ex 0.5ex;
+      border: 1px solid #666;
+      }
+
+      table.sa + table.sa{
+      margin-top: 5ex;
+      }
+
+      table.sa th {
+      front-weight: bold;
+      }
+
+      tr.writeon td
+      {
+      padding: 1ex 0.5ex;
+      color: #666;
+      }
+
+      .queno { text-align: right; padding: 0ex 1ex; text-transform: uppercase;}
+      .levno { text-align: center; }
+      .smiley img { padding: 0.5ex; }
+
+      table.final {
+      margin-top: 2ex;
+      }
+
+      li .level {
+      font-size: 80%;
+      color: #666;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="cover">
+
+      <div class="header">
+	<div><img src="graphics/allerton_logo.jpg" /></div>
+	<h2>Maths Assessment Through the Year</h2>
+      </div>
+
+      <h1 tal:content="scheme_title">Year 7</h1>
+
+      <div class="coverlabel"><span class="label">Name:</span><br clear="all" /></div>
+      <div class="coverlabel"><span class="label">Group:</span><br clear="all" /></div>
+      <div class="coverlabel"><span class="label">Teacher:</span><br clear="all" /></div>
+      <div class="coverlabel"><span class="label">Target level:</span><br clear="all" /></div>
+
+
+    </div>
+
+    <div class="halfterm"
+	 tal:repeat="ht half_terms">
+      <h2 tal:content="ht/title">Autumn 1st Half-Term</h2>
+      <div tal:condition="ht/units">
+	<h3>Topics covered this half-term:</h3>
+	<ul>
+	  <li tal:repeat="u nocall:ht/units"
+	      tal:content="u/title">Adding and subtracting integers</li>
+	</ul>
+      </div>
+
+      <tal:units repeat="u ht/units">
+	<div tal:condition="u/testquestions">
+	  <h3>Test self-assessment</h3>
+	  <div class="sa">
+	    <table class="sa">
+	      <tr>
+		<th class="queno">Q</th>
+		<th>Skill</th>
+		<th tal:repeat="iName python:['happy', 'soso', 'sad']"
+		    class="smiley"
+		    ><img tal:attributes="src string:graphics/mm_${iName}.png" /></th>
+	      </tr>
+	      <tr tal:repeat="q u/testquestions">
+		<td tal:content="q/q|repeat/q/number" class="queno">12</td>
+		<td tal:content="q/description|nothing">Skill</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	      </tr>
+	    </table>
+	  </div>
+	</div>
+	<div class="end"></div>
+      </tal:units>
+
+      <h4 class="mylevel">My level:</h4>
+      <table class="sa">
+	<colgroup>
+	  <col style="width: 50%;" />
+	  <col style="width: 50%;" />
+	</colgroup>
+	<thead>
+	  <tr>
+	    <th>Strengths</th>
+	    <th>Things to work on</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr class="writeon" tal:repeat="boo python:range(0,2)">
+	    <td tal:content="repeat/boo/number"> </td>
+	    <td tal:content="repeat/boo/number"> </td>
+	  </tr>
+	</tbody>
+      </table>
+      
+    </div>
+
+    <div class="back">
+      <img src="graphics/progress-chart.png" />
+    </div>
+
+  </body>
+</html>

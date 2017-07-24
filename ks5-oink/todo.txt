@@ -1,0 +1,34 @@
+- add FAQs and explains HOW TO CONTRIBUTE to the scheme, and HOW to
+  manage / update it, in other words some documentation!!
+
+o configure some tests (and projects) to go with the units, display
+  and link to them in the scheme
+
+  x complete the Y7 (E,C,S 8) test config
+
+  x find and put in tests for the camess 9 schemes, as well as the
+    tests from last year for the other schemes
+
+  - link up the test / project files / directories - let's look in
+    those directories to see if there's anything there, then display a
+    link to that directory
+
+- try out some other schemes, e.g. a KS4 or KS5 one as proof of concept
+
+x construct the take-home cards
+
+  x fix print styling
+
+  x make into pdfs, linked from the scheme
+
+x make parent-version, without the test links in there !!!
+
+x make the question-by-question analysis booklets
+
+x make a print.css to allow pretty printing
+
+x an index.html which launches people into the different schemes,
+
+x fix the set markers (broken now that we've done away with set number
+  and year number, replaced with titles)
+

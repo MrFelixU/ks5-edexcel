@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title tal:content="string:Cards for ${scheme_title}">Cards for Year 7 Set 3</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" media="all" href="style.css" type="text/css" />
+    <link rel="icon" href="graphics/favicon.ico" type="image/x-icon" />
+  </head>
+  
+  <body class="cards">
+
+
+    <div class="halfterm"
+	 tal:repeat="ht half_terms">
+      <div class="cardinfo">
+	<h4 tal:content="scheme_title">Year 7 Set 3</h4>
+      </div>
+      <h2 tal:content="string:${ht/title} (${ht/weeks} weeks)">Autumn 1st Half-Term</h2>
+      
+      <table class="card">
+	<thead>
+	  <tr>
+	    <th>Teaching</th>
+	    <th>Assessment</th>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>
+		<div tal:repeat="unit ht/units">
+		  <h3 tal:condition="not:unit/testquestions"
+		      tal:content="unit/title|nothing">Multiples, factors and primes</h3>
+		  <ul tal:condition="unit/objectives">
+		    <li tal:repeat="lo unit/objectives" tal:content="structure lo">order decimals</li>
+		  </ul>
+		</div>
+	      </td>
+	      <td>
+		<div tal:repeat="unit ht/units">
+		  <h3 tal:condition="unit/testquestions"
+		      tal:content="unit/title">Statistics Assessment</h3>
+		  <ul tal:condition="unit/testquestions">
+		    <li tal:repeat="q unit/testquestions">
+		      <span class="qno" tal:content="string:[${q/q}]">[1]</span>
+		      <span tal:replace="q/description">Writing probabilities</span>
+		      <span tal:condition="q/level" tal:content="string:(level ${q/level})">(level 4/5)</span>
+		    </li>
+		  </ul>
+		</div>
+	      </td>
+	    </tr>
+	  </tbody>
+	</table>
+      </div>    
+    </body>
+  </html>
+
