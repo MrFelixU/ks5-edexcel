@@ -1,123 +1,176 @@
-scheme_id,unit_id,objective
-y12m,1pure1,"be able to perform essential algebraic manipulations, such as expanding brackets, collecting like terms, factorising etc;"
-y12m,1pure1,understand and be able to use the laws of indices for all rational exponents;
-y12m,1pure1,"be able to use and manipulate surds, including rationalising the denominator."
-y12m,1pure1,be able to solve a quadratic equation by factorising;
-y12m,1pure1,be able to work with quadratic functions and their graphs;
-y12m,1pure1,"know and be able to use the discriminant of a quadratic function, including the conditions for real and repeated roots;"
-y12m,1pure1,be able to complete the square;
-y12m,1pure1,"be able to solve quadratic equations, including in a function of the unknown."
-y12m,1pure1,be able to solve linear simultaneous equations using elimination and substitution;
-y12m,1pure1,be able to use substitution to solve simultaneous equations where one equation is linear and the other quadratic.
-y12m,1pure1,be able to solve linear and quadratic inequalities;
-y12m,1pure1,know how to express solutions through correct use of 'and' and 'or' or through set notation;
-y12m,1pure1,be able to interpret linear and quadratic inequalities graphically;
-y12m,1pure1,be able to represent linear and quadratic inequalities graphically.
-y12m,1pure1,understand and use graphs of functions;
-y12m,1pure1,be able to sketch curves defined by simple equations including polynomials;
-y12m,1pure1,be able to use intersection points of graphs to solve equations.
-y12m,1pure1,understand the effect of simple transformations on the graph of y = f(x);
-y12m,1pure1,be able to sketch the result of a simple transformation given the graph of any function y = f(x).
-y12m,1pure2,understand and use the equation of a straight line;
-y12m,1pure2,know and be able to apply the gradient conditions for two straight lines to be parallel or perpendicular;
-y12m,1pure2,be able to find lengths and areas using equations of straight lines;
-y12m,1pure2,be able to use straight-line graphs in modelling.
-y12m,1pure2,be able to find the midpoint of a line segment;
-y12m,1pure2,understand and use the equation of a circle;
-y12m,1pure2,be able to find points of intersection between a circle and a line;
-y12m,1pure2,know and be able to use the properties of chords and tangents.
-y12m,1pure3,be able to use algebraic division;
-y12m,1pure3,know and be able to apply the factor theorem;
-y12m,1pure3,be able to fully factorise a cubic expression;
-y12m,1pure3,"understand and be able to use the structure of mathematical proof, proceeding from given assumptions through a series of logical steps to a conclusion;"
-y12m,1pure3,"be able to use methods of proof, including proof by deduction, proof by exhaustion and disproof by counter-example."
-y12m,1pure3,understand and be able to use the binomial expansion of (a + bx)n for positive integer n;
-y12m,1pure3,be able to find an unknown coefficient of a binomial expansion.
-y12m,1pure4,"understand and be able to use the definitions of sine, cosine and tangent for all arguments;"
-y12m,1pure4,understand and be able to use the sine and cosine rules;
-y12m,1pure4,understand and be able to use the area of a triangle in the form 2 ?? sin ?;
-y12m,1pure4,"understand and be able to use the sine, cosine and tangent functions; their graphs, symmetries and periodicity."
-y12m,1pure4,be able to solve trigonometric equations within a given interval
-y12m,1pure4,understand and be able to use tan ? = sin ? / cos ?
-y12m,1pure4,Understand and use sin2 ? + cos2 ? = 1
-y12m,1pure5,be able to use vectors in two dimensions;
-y12m,1pure5,be able to calculate the magnitude and direction of a vector and convert between component form and magnitude/direction form;
-y12m,1pure5,"be able to add vectors diagrammatically and perform the algebraic operations of vector addition and multiplication by scalars, and understand their geometrical interpretations."
-y12m,1pure5,understand and be able to use position vectors;
-y12m,1pure5,be able to calculate the distance between two points represented by position vectors;
-y12m,1pure5,"be able to use vectors to solve problems in pure mathematics and in context, (including forces)."
-y12m,1pure6,"understand and be able to use the derivative of f(x) as the gradient of the tangent to the graph of y = f(x) at a general point (x, y);"
-y12m,1pure6,understand the gradient of the tangent as a limit and its interpretation as a rate of change;
-y12m,1pure6,be able to sketch the gradient function for a given curve;
-y12m,1pure6,be able to find second derivatives;
-y12m,1pure6,understand differentiation from first principles for small positive integer powers of x;
-y12m,1pure6,"be able to differentiate ?^? , for rational values of n, and related constant multiples, sums and differences."
-y12m,1pure6,"be able to apply differentiation to find gradients, tangents and normals, maxima and minima and stationary points;"
-y12m,1pure6,be able to identify where functions are increasing or decreasing.
-y12m,1pure7,know and be able to use the Fundamental Theorem of Calculus;
-y12m,1pure7,"be able to integrate ? ? (excluding n = ?1), and related sums, differences and constant multiples."
-y12m,1pure7,be able to evaluate definite integrals;
-y12m,1pure7,be able to use a definite integral to find the area under a curve.
-y12m,1pure8,"know and be able to use the function ? ? and its graph, where a is positive;"
-y12m,1pure8,know and be able to use the function e? and its graph;
-y12m,1pure8,know that the gradient of e?? is equal to ?e?? and hence understand why the exponential model is suitable in many applications;
-y12m,1pure8,"know and be able to use the definition of log ? ? as the inverse of ? ? , where a is positive and ??0;"
-y12m,1pure8,know and be able to use the function ln ? and its graph;
-y12m,1pure8,know and be able to use ln x as the inverse function of e? ;
-y12m,1pure8,understand and use the laws of logarithms
-y12m,1pure8,be able to solve equations of the form ? ? = ?;
-y12m,1pure8,"be able to use logarithmic graphs to estimate parameters in relationships of the form ? = ?? ? and ? = ?? ? , given data for x and y;"
-y12m,1pure8,"understand and be able to use exponential growth and decay in modelling, giving consideration to limitations and refinements of exponential models."
-y12m,1stats1,understand and be able to use the terms 'population' and 'sample';
-y12m,1stats1,know how to use samples to make informal inferences about the population;
-y12m,1stats1,be able to describe advantages and disadvantages of sampling compared to census.
-y12m,1stats1,understand and be able to use sampling techniques;
-y12m,1stats1,be able to describe advantages and disadvantages of sampling techniques;
-y12m,1stats1,be able to select or critique sampling techniques in the context of solving a statistical problem;
-y12m,1stats1,understand that different samples can lead to different conclusions about the population.
-y12m,1stats2,"be able to calculate measures of location, mean, median and mode;"
-y12m,1stats2,"be able to calculate measures of variation, standard deviation, variance, range and interpercentile range;"
-y12m,1stats2,be able to interpret and draw inferences from summary statistics.
-y12m,1stats2,know how to interpret diagrams for single variable data;
-y12m,1stats2,know how to interpret scatter diagrams and regression lines for bivariate data;
-y12m,1stats2,recognise the explanatory and response variables;
-y12m,1stats2,be able to make predictions using the regression line and understand its limitations;
-y12m,1stats2,understand informal interpretation of correlation;
-y12m,1stats2,understand that correlation does not imply causation;
-y12m,1stats2,recognise and interpret possible outliers in data sets and statistical diagrams;
-y12m,1stats2,be able to select or critique data presentation techniques in the context of a statistical problem;
-y12m,1stats2,"be able to clean data, including dealing with missing data, errors and outliers."
-y12m,1stats3,understand and be able to use mutually exclusive and independent events when calculating probabilities;
-y12m,1stats3,be able to make links to discrete and continuous distributions.
-y12m,1stats4,"understand and be able to use simple, discrete probability distributions, including the binomial distribution;"
-y12m,1stats4,be able to identify the discrete uniform distribution;
-y12m,1stats4,be able to calculate probabilities using the binomial distribution.
-y12m,1stats5,"understand and be able to apply the language of statistical hypothesis testing, developed through a binomial model."
-y12m,1stats5,be able to conduct a statistical hypothesis test for the proportion in the binomial distribution and interpret the results in context;
-y12m,1stats5,understand that a sample is being used to make an inference about the population;
-y12m,1stats5,appreciate that the significance level is the probability of incorrectly rejecting the null hypothesis.
-y12m,1mech6,"understand the concept of a mathematical model, and be able to abstract from a real-world situation to a mathematical description (model);"
-y12m,1mech6,know the language used to describe simplifying assumptions;
-y12m,1mech6,understand the particle model;
-y12m,1mech6,be familiar with the basic terminology for mechanics;
-y12m,1mech6,be familiar with commonly-made assumptions when using these models;
-y12m,1mech6,"be able to analyse the model appropriately, and interpret and communicate the implications of the analysis in terms of the situation being modelled;"
-y12m,1mech6,"understand and use fundamental quantities and units in the S.I. system: length, time and mass;"
-y12m,1mech6,"Understand that units behave in the same way as algebraic quantities"
-y12m,1mech6,"understand and use derived quantities and units: velocity, acceleration, force, weight;"
-y12m,1mech6,"know the difference between position, displacement and distance;"
-y12m,1mech6,"know the difference between velocity and speed, and between acceleration and magnitude of acceleration;"
-y12m,1mech6,know the difference between mass and weight (including gravity);
-y12m,1mech6,understand that there are different types of forces.
-y12m,1mech7,"be able to draw and interpret kinematics graphs, knowing the significance (where appropriate) of their gradients and the areas underneath them."
-y12m,1mech7,recognise when it is appropriate to use the suvat formulae for constant acceleration;
-y12m,1mech7,be able to solve kinematics problems using constant acceleration formulae;
-y12m,1mech7,be able to solve problems involving vertical motion under gravity.
-y12m,1mech8,understand the concept of a force; understand and use Newton's first law.
-y12m,1mech8,"understand and be able to use Newton's second law for motion in a straight line (restricted to forces in two perpendicular directions or simple cases of forces given as 2D (i, j) vectors.);"
-y12m,1mech9,be able to use calculus (differentiation) in kinematics to model motion in a straight line for a particle moving with variable acceleration;
-y12m,1mech9,understand that gradients of the relevant graphs link to rates of change;
-y12m,1mech9,know how to find max and min velocities by considering zero gradients and understand how this links with the actual motion (i.e. acceleration = 0).
-y12m,1mech9,be able to use calculus (integration) in kinematics to model motion in a straight line for a particle moving under the action of a variable force;
-y12m,1mech9,"understand that the area under a graph is the integral, which leads to a physical quantity;"
-y12m,1mech9,know how to use initial conditions to calculate the constant of integration and refer back to the problem.
+"scheme_id","unit_id","objective"
+"y12m","1pure1","be able to perform essential algebraic manipulations, such as expanding brackets, collecting like terms, factorising etc;"
+"y12m","1pure1","understand and be able to use the laws of indices for all rational exponents;"
+"y12m","1pure1","be able to use and manipulate surds, including rationalising the denominator."
+"y12m","1pure1","be able to solve a quadratic equation by factorising;"
+"y12m","1pure1","be able to work with quadratic functions and their graphs;"
+"y12m","1pure1","know and be able to use the discriminant of a quadratic function, including the conditions for real and repeated roots;"
+"y12m","1pure1","be able to complete the square;"
+"y12m","1pure1","be able to solve quadratic equations, including in a function of the unknown."
+"y12m","1pure1","be able to solve linear simultaneous equations using elimination and substitution;"
+"y12m","1pure1","be able to use substitution to solve simultaneous equations where one equation is linear and the other quadratic."
+"y12m","1pure1","be able to solve linear and quadratic inequalities;"
+"y12m","1pure1","know how to express solutions through correct use of 'and' and 'or' or through set notation;"
+"y12m","1pure1","be able to interpret linear and quadratic inequalities graphically;"
+"y12m","1pure1","be able to represent linear and quadratic inequalities graphically."
+"y12m","1pure1","understand and use graphs of functions;"
+"y12m","1pure1","be able to sketch curves defined by simple equations including polynomials;"
+"y12m","1pure1","be able to use intersection points of graphs to solve equations."
+"y12m","1pure1","understand the effect of simple transformations on the graph of y = f(x);"
+"y12m","1pure1","be able to sketch the result of a simple transformation given the graph of any function y = f(x)."
+"y12m","1pure2","understand and use the equation of a straight line;"
+"y12m","1pure2","know and be able to apply the gradient conditions for two straight lines to be parallel or perpendicular;"
+"y12m","1pure2","be able to find lengths and areas using equations of straight lines;"
+"y12m","1pure2","be able to use straight-line graphs in modelling."
+"y12m","1pure2","be able to find the midpoint of a line segment;"
+"y12m","1pure2","understand and use the equation of a circle;"
+"y12m","1pure2","be able to find points of intersection between a circle and a line;"
+"y12m","1pure2","know and be able to use the properties of chords and tangents."
+"y12m","1pure3","be able to use algebraic division;"
+"y12m","1pure3","know and be able to apply the factor theorem;"
+"y12m","1pure3","be able to fully factorise a cubic expression;"
+"y12m","1pure3","understand and be able to use the structure of mathematical proof, proceeding from given assumptions through a series of logical steps to a conclusion;"
+"y12m","1pure3","be able to use methods of proof, including proof by deduction, proof by exhaustion and disproof by counter-example."
+"y12m","1pure3","understand and be able to use the binomial expansion of (a + bx)n for positive integer n;"
+"y12m","1pure3","be able to find an unknown coefficient of a binomial expansion."
+"y12m","1pure4","understand and be able to use the definitions of sine, cosine and tangent for all arguments;"
+"y12m","1pure4","understand and be able to use the sine and cosine rules;"
+"y12m","1pure4","understand and be able to use the area of a triangle in the form 2 ?? sin ?;"
+"y12m","1pure4","understand and be able to use the sine, cosine and tangent functions; their graphs, symmetries and periodicity."
+"y12m","1pure4","be able to solve trigonometric equations within a given interval"
+"y12m","1pure4","understand and be able to use tan ? = sin ? / cos ?"
+"y12m","1pure4","Understand and use sin2 ? + cos2 ? = 1"
+"y12m","1pure5","be able to use vectors in two dimensions;"
+"y12m","1pure5","be able to calculate the magnitude and direction of a vector and convert between component form and magnitude/direction form;"
+"y12m","1pure5","be able to add vectors diagrammatically and perform the algebraic operations of vector addition and multiplication by scalars, and understand their geometrical interpretations."
+"y12m","1pure5","understand and be able to use position vectors;"
+"y12m","1pure5","be able to calculate the distance between two points represented by position vectors;"
+"y12m","1pure5","be able to use vectors to solve problems in pure mathematics and in context, (including forces)."
+"y12m","1pure6","understand and be able to use the derivative of f(x) as the gradient of the tangent to the graph of y = f(x) at a general point (x, y);"
+"y12m","1pure6","understand the gradient of the tangent as a limit and its interpretation as a rate of change;"
+"y12m","1pure6","be able to sketch the gradient function for a given curve;"
+"y12m","1pure6","be able to find second derivatives;"
+"y12m","1pure6","understand differentiation from first principles for small positive integer powers of x;"
+"y12m","1pure6","be able to differentiate ?^? , for rational values of n, and related constant multiples, sums and differences."
+"y12m","1pure6","be able to apply differentiation to find gradients, tangents and normals, maxima and minima and stationary points;"
+"y12m","1pure6","be able to identify where functions are increasing or decreasing."
+"y12m","1pure7","know and be able to use the Fundamental Theorem of Calculus;"
+"y12m","1pure7","be able to integrate ? ? (excluding n = ?1), and related sums, differences and constant multiples."
+"y12m","1pure7","be able to evaluate definite integrals;"
+"y12m","1pure7","be able to use a definite integral to find the area under a curve."
+"y12m","1pure8","know and be able to use the function ? ? and its graph, where a is positive;"
+"y12m","1pure8","know and be able to use the function e? and its graph;"
+"y12m","1pure8","know that the gradient of e?? is equal to ?e?? and hence understand why the exponential model is suitable in many applications;"
+"y12m","1pure8","know and be able to use the definition of log ? ? as the inverse of ? ? , where a is positive and ??0;"
+"y12m","1pure8","know and be able to use the function ln ? and its graph;"
+"y12m","1pure8","know and be able to use ln x as the inverse function of e? ;"
+"y12m","1pure8","understand and use the laws of logarithms"
+"y12m","1pure8","be able to solve equations of the form ? ? = ?;"
+"y12m","1pure8","be able to use logarithmic graphs to estimate parameters in relationships of the form ? = ?? ? and ? = ?? ? , given data for x and y;"
+"y12m","1pure8","understand and be able to use exponential growth and decay in modelling, giving consideration to limitations and refinements of exponential models."
+"y12m","1stats1","understand and be able to use the terms 'population' and 'sample';"
+"y12m","1stats1","know how to use samples to make informal inferences about the population;"
+"y12m","1stats1","be able to describe advantages and disadvantages of sampling compared to census."
+"y12m","1stats1","understand and be able to use sampling techniques;"
+"y12m","1stats1","be able to describe advantages and disadvantages of sampling techniques;"
+"y12m","1stats1","be able to select or critique sampling techniques in the context of solving a statistical problem;"
+"y12m","1stats1","understand that different samples can lead to different conclusions about the population."
+"y12m","1stats2","be able to calculate measures of location, mean, median and mode;"
+"y12m","1stats2","be able to calculate measures of variation, standard deviation, variance, range and interpercentile range;"
+"y12m","1stats2","be able to interpret and draw inferences from summary statistics."
+"y12m","1stats2","know how to interpret diagrams for single variable data;"
+"y12m","1stats2","know how to interpret scatter diagrams and regression lines for bivariate data;"
+"y12m","1stats2","recognise the explanatory and response variables;"
+"y12m","1stats2","be able to make predictions using the regression line and understand its limitations;"
+"y12m","1stats2","understand informal interpretation of correlation;"
+"y12m","1stats2","understand that correlation does not imply causation;"
+"y12m","1stats2","recognise and interpret possible outliers in data sets and statistical diagrams;"
+"y12m","1stats2","be able to select or critique data presentation techniques in the context of a statistical problem;"
+"y12m","1stats2","be able to clean data, including dealing with missing data, errors and outliers."
+"y12m","1stats3","understand and be able to use mutually exclusive and independent events when calculating probabilities;"
+"y12m","1stats3","be able to make links to discrete and continuous distributions."
+"y12m","1stats4","understand and be able to use simple, discrete probability distributions, including the binomial distribution;"
+"y12m","1stats4","be able to identify the discrete uniform distribution;"
+"y12m","1stats4","be able to calculate probabilities using the binomial distribution."
+"y12m","1stats5","understand and be able to apply the language of statistical hypothesis testing, developed through a binomial model."
+"y12m","1stats5","be able to conduct a statistical hypothesis test for the proportion in the binomial distribution and interpret the results in context;"
+"y12m","1stats5","understand that a sample is being used to make an inference about the population;"
+"y12m","1stats5","appreciate that the significance level is the probability of incorrectly rejecting the null hypothesis."
+"y12m","1mech6","understand the concept of a mathematical model, and be able to abstract from a real-world situation to a mathematical description (model);"
+"y12m","1mech6","know the language used to describe simplifying assumptions;"
+"y12m","1mech6","understand the particle model;"
+"y12m","1mech6","be familiar with the basic terminology for mechanics;"
+"y12m","1mech6","be familiar with commonly-made assumptions when using these models;"
+"y12m","1mech6","be able to analyse the model appropriately, and interpret and communicate the implications of the analysis in terms of the situation being modelled;"
+"y12m","1mech6","understand and use fundamental quantities and units in the S.I. system: length, time and mass;"
+"y12m","1mech6","Understand that units behave in the same way as algebraic quantities"
+"y12m","1mech6","understand and use derived quantities and units: velocity, acceleration, force, weight;"
+"y12m","1mech6","know the difference between position, displacement and distance;"
+"y12m","1mech6","know the difference between velocity and speed, and between acceleration and magnitude of acceleration;"
+"y12m","1mech6","know the difference between mass and weight (including gravity);"
+"y12m","1mech6","understand that there are different types of forces."
+"y12m","1mech7","be able to draw and interpret kinematics graphs, knowing the significance (where appropriate) of their gradients and the areas underneath them."
+"y12m","1mech7","recognise when it is appropriate to use the suvat formulae for constant acceleration;"
+"y12m","1mech7","be able to solve kinematics problems using constant acceleration formulae;"
+"y12m","1mech7","be able to solve problems involving vertical motion under gravity."
+"y12m","1mech8","understand the concept of a force; understand and use Newton's first law."
+"y12m","1mech8","understand and be able to use Newton's second law for motion in a straight line (restricted to forces in two perpendicular directions or simple cases of forces given as 2D (i, j) vectors.);"
+"y12m","1mech9","be able to use calculus (differentiation) in kinematics to model motion in a straight line for a particle moving with variable acceleration;"
+"y12m","1mech9","understand that gradients of the relevant graphs link to rates of change;"
+"y12m","1mech9","know how to find max and min velocities by considering zero gradients and understand how this links with the actual motion (i.e. acceleration = 0)."
+"y12m","1mech9","be able to use calculus (integration) in kinematics to model motion in a straight line for a particle moving under the action of a variable force;"
+"y12m","1mech9","understand that the area under a graph is the integral, which leads to a physical quantity;"
+"y12m","1mech9","know how to use initial conditions to calculate the constant of integration and refer back to the problem."
+,,
+,,
+,,
+,,
+"y12fm","1core1","be able to solve any quadratic equation with real coefficients;"
+"y12fm","1core1","be able to add, subtract and multiply complex numbers in the form x + iy with x and y real;"
+"y12fm","1core1","understand and use the terms 'real part' and 'imaginary part'."
+"y12fm","1core1","be able to use and interpret Argand diagrams."
+"y12fm","1core1","be able to convert between the Cartesian form and the modulus-argument form of a complex number;"
+"y12fm","1core1","be able to multiply and divide complex numbers in modulus-argument form."
+"y12fm","1core1","be able to construct and interpret simple loci in the Argand diagram "
+"y12fm","1core2","be able to find the dimension of a matrix;"
+"y12fm","1core2","be able to add and subtract matrices of the same dimension;"
+"y12fm","1core2","be able to multiply a matrix by a scalar;"
+"y12fm","1core2","be able to multiply conformable matrices."
+"y12fm","1core2","be able to calculate determinants of 2 by 2 and 3 by 3 matrices;"
+"y12fm","1core2","understand and use singular and non-singular matrices;"
+"y12fm","1core2","be able to know the properties of inverse matrices;"
+"y12fm","1core2","be able to calculate the inverse of non-singular 2 by 2 and 3 by 3 matrices."
+"y12fm","1core2","be able to use matrices and their inverses to solve linear simultaneous equations, including three linear simultaneous equations in three variables;"
+"y12fm","1core2","be able to interpret geometrically the solution and failure of solution of three simultaneous linear equations."
+"y12fm","1core2","be able to use matrices to represent 2D rotations, reflections, enlargements and translations;"
+"y12fm","1core2","understand and use zero and identity matrices;"
+"y12fm","1core2","be able to use matrix products to represent combinations of transformations;"
+"y12fm","1core2","be able to use matrices to represent linear transformations in three dimensions;"
+"y12fm","1core2","be able to use inverse matrices to reverse the effect of a linear transformation;"
+"y12fm","1core2","be able to use the determinant of a matrix to determine the area scale factor of a transformation; "
+"y12fm","1core2","be able to find invariant points and lines for a linear transformation."
+"y12fm","1core3","understand and use the complex conjugate of a complex number;"
+"y12fm","1core3","be able to divide two complex numbers by using the complex conjugate of the denominator;"
+"y12fm","1core3","know that non-real roots of polynomial equations with real coefficients occur in conjugate pairs;"
+"y12fm","1core3","be able to solve cubic or quartic equations with real coefficients."
+"y12fm","1core4","be able to use sigma notation;"
+"y12fm","1core4","understand and use formulae for the sums of integers, squares and cubes;"
+"y12fm","1core4","be able to use known formulae to sum more complex series."
+"y12fm","1core5","understand and use the relationship between roots and coefficients of polynomial equations up to quartic equations."
+"y12fm","1core5","be able to form a polynomial equation whose roots are a linear transformation of the roots of a given polynomial equation (of at least cubic degree)."
+"y12fm","1core6","be able to obtain a proof for the summation of a series, using induction;"
+"y12fm","1core6","be able to use proof by induction to prove that an expression is divisible by a certain integer;"
+"y12fm","1core6","be able to use mathematical induction to prove general statements involving matrix multiplication."
+"y12fm","1core7","know how to find the vector equation of a line in both two and three dimensions;"
+"y12fm","1core7","understand and use the Cartesian forms of an equation of a straight line in three dimensions;"
+"y12fm","1core7","understand and use the vector and Cartesian forms of the equation of a plane."
+"y12fm","1core7","be able to find the scalar product of two vectors;"
+"y12fm","1core7","be able to check whether vectors are perpendicular by using the scalar product;"
+"y12fm","1core7","be able to use the scalar product to express the equation of a plane;"
+"y12fm","1core7","be able to use the scalar product to calculate the angle between two lines;"
+"y12fm","1core7","be able to use the scalar product to calculate the angle between two planes;"
+"y12fm","1core7","be able to use the scalar product to calculate the angle between a line and a plane."
+"y12fm","1core7","be able to find the points of intersection of lines and planes which meet;"
+"y12fm","1core7","be able to calculate the perpendicular distance between two lines;"
+"y12fm","1core7","be able to calculate the perpendicular distance from a point to a line or to a plane."
+"y12fm","1core8","be able to derive formulae for and calculate volumes of revolution about both the x and y-axes."
