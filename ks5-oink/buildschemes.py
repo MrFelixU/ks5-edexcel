@@ -1,16 +1,24 @@
-import csv, sys, logging, os, os.path, re
+import csv, sys, logging, os, os.path, re, datetime
 from simpletal import simpleTALES, simpleTAL
 
-logging.basicConfig(level = logging.INFO, filename="buildschemes.log")
+logging.basicConfig(level = logging.DEBUG, filename="buildschemes.log")
 loginfo = lambda x: logging.info(x)
 textmatch = lambda x,y: str(x).lower()==str(y).lower()
 
-
 class SchemeLibrary:
 
-    def __init__(self, config_path = "config"):
-        self.schemes = {}
+    def __init__(self, config_path = "config", output_path = 'scheme'):
         self.config_path = config_path
+        self.output_path = output_path
+
+        # we'll put the Scheme objects in here
+        self.schemes = {}
+
+        # which teaching group will use which scheme?
+        self.groups_schemes = []
+
+        # what half-terms are we working with?
+        self.half_terms = []
 
     def loadSchemes(self):
         # open up the file with all the units for each scheme
@@ -49,20 +57,32 @@ class SchemeLibrary:
                 continue
             s = self.getScheme(sid.lower())
             u = s.getUnit(uid.lower())
-            u.objectives.append(obj)
+            u.appendObjective(obj)
+            logging.debug("Adding objective [%s] to scheme [%s] and unit [%s]" % (obj,sid,uid))
 
-        _kw_path = os.path.join(self.config_path, 'Keywords.csv')
-        for o_row in csv.DictReader(open(_kw_path)):
-            sid,uid,kw = [o_row[x] for x in ['scheme_id', 'unit_id', 'keyword']]
-            if not (sid and uid and kw):
+        _groups_path = os.path.join(self.config_path, 'SetsSchemes.csv')
+        for entry in csv.DictReader(open(_groups_path)):
+            grp,sid = entry['teaching_group'], entry['scheme_id']
+            if not (grp and sid):
                 continue
-            # let's not bother if we're not actually building this scheme
-            if not self.getScheme(sid):
-                continue
-            s = self.getScheme(sid.lower())
-            u = s.getUnit(uid.lower())
-            u.keywords.append(obj)
+            self.groups_schemes.append( (grp,sid) )
 
+        _ht_path = os.path.join(self.config_path,'HalfTerms.csv')
+        for ht in csv.DictReader(open(_ht_path)):
+            num = int(ht['half_term'])
+            title = ht['title']
+            long_title = ht['long_title']
+            code = ht['code']
+            (d,m,y) = [int(x) for x in ht['start_date'].split('/')]
+            start_date = datetime.date(y,m,d)
+            weeks = int(ht['weeks'])
+            self.half_terms.append( {
+                'num':num,
+                'long_title' : long_title,
+                'code' : code,
+                'start_date' : start_date,
+                'weeks' : weeks
+            })
 
     def addScheme(self, scheme):
         self.schemes[scheme.id] = scheme
@@ -74,6 +94,28 @@ class SchemeLibrary:
         """Returns a list of all known scheme ids"""
         return self.schemes.keys()
 
+    def getAllocatedSchemes(self):
+        return [AllocatedScheme(g,self.getScheme(sid)) for (g,sid) in self.groups_schemes]
+
+    def writeHTML(self):
+        context = simpleTALES.Context(allowPythonPath = 1)
+        context.addGlobal('library', self)
+        template_file = open("templates/index.html")
+        template = simpleTAL.compileHTMLTemplate(template_file, inputEncoding="utf-8")
+        template_file.close()
+        out_file = open(os.path.join(self.output_path, "index.html"), 'w')
+        template.expand(context, out_file, outputEncoding="utf-8")
+        out_file.close()
+
+        # make a separate details file for each allocated scheme
+        for ascheme in self.getAllocatedSchemes():
+            context.addGlobal('thisascheme', ascheme)
+            template_file = open("templates/details.html")
+            template = simpleTAL.compileHTMLTemplate(template_file, inputEncoding="utf-8")
+            template_file.close()
+            out_file = open(os.path.join(self.output_path, ascheme.getDetailsFileName()), 'w')
+            template.expand(context, out_file, outputEncoding="utf-8")
+            out_file.close()
 
 class Scheme:
 
@@ -85,13 +127,16 @@ class Scheme:
         # the actual units as a dictionary { id : unit object }
         self.units = []
 
-
     def getUnit(self, id):
         matches = [u for u in self.units if textmatch(u.id, id)]
         if len(matches)==1:
             return matches[0]
         else:
             raise "We have a duplicate unit with id %s!" % str(id)
+
+    def getUnitsForHT(self, htnum):
+        matches = [u for u in self.units if u.half_term == htnum]
+        return matches
 
     def addUnit(self, id, title, half_term, unit_type, filename):
         # check first we don't already have one
@@ -100,50 +145,48 @@ class Scheme:
             raise "We already have unit with the id '%s'" % str(id)
         self.units.append(SchemeUnit(id, title, half_term, unit_type, filename))
 
+class AllocatedScheme:
 
-    def hasKeywords(self):
-        """Do any of the units in this scheme bother with keywords?
+    def __init__(self, teaching_group = None, scheme = None):
+        self.scheme = scheme
+        self.teaching_group = teaching_group
 
-        If not, the template will not want to waste a column on them.
-        """
-        _has_kw = False
+    def getTitle(self):
+        return self.teaching_group
 
-        # This is not terribly efficient, but hopefully fool-proof.  We could
-        # set this flag up when the unit is first read in, but if someone
-        # dynamically adds in keywords later, we'd need to beware
-        for (term, units) in self.units_by_ht.items():
-            for u in units:
-                if u.getKeywords():
-                    _has_kw = True
-                    return True
-        return False
+    def getDetailsFileName(self):
+        return "scheme-%s.html" % self.teaching_group.replace(" ","-").lower()
 
 
 class SchemeUnit:
 
     def __init__(self, id, title='', half_term = 0, unit_type='', filename='',
-                 objectives=[], keywords=[]):
+                 objectives=[]):
         self.id = id
         self.title = title
         self.half_term = half_term
 
         # the main thing
-        self.objectives = objectives
-
-        # not sure whether this still has a place?
-        self.keywords = keywords
+        self._objectives = objectives[:]
 
         # we'll try to look for resources related to each unit to list
         # on the scheme details page
         self.resource_links = []
 
-
-    def getKeywords(self):
-        return self.keywords
+    def appendObjective(self, obj):
+        self._objectives.append(obj)
+        logging.debug("Just added [%s] to %s.  Length is now %d" % (obj,self.id,len(self._objectives)))
 
     def getObjectives(self):
-        return self.objectives
+        logging.debug("reporting back [%s], [%d]" % (self.id, len(self._objectives)))
+        return self._objectives[:]
 
+
+
+if __name__ == "__main__":
+    lib = SchemeLibrary()
+    lib.loadSchemes()
+    lib.writeHTML()
 
 
 """
@@ -151,7 +194,7 @@ class SchemeUnit:
 """
 
 
-def __main__():
+def __oldmain__():
     # load each scheme, i.e. which units are to be taught in order
     schemes_by_year_tier = findUnitsForSchemes("config/SchemeUnits.csv",
                                                "config/Assessments.csv",

@@ -12,17 +12,11 @@
 
   <h1>Schemes of Work</h1>
 
-  <ul tal:condition="other_schemes">
-    <li tal:repeat="s other_schemes">
-      <a tal:attributes="href s/filename" tal:content="string:${s/title} (${s/sid})">Year 8 Set 2</a>
-
-      <tal:comment condition="none">
-      <!-- At the moment, the "extras" are unused, so let's leave out the links -->
-
-      <a tal:attributes="href s/filename" class="discreet schemelink">[Scheme]</a>
-      <a tal:attributes="href s/cardsname" class="discreet cardslink">[Cards]</a>
-      <a tal:attributes="href s/bookletname" class="discreet bookletlink">[Booklets]</a>
-    </tal:comment>
+  <ul tal:define="aschemes library/getAllocatedSchemes"
+      tal:condition="nocall:aschemes">
+    <li tal:repeat="as aschemes">
+      <a tal:attributes="href as/getDetailsFileName"
+         tal:content="string:${as/getTitle} (${as/scheme/id})">Year 8 Set 2</a>
     </li>
   </ul>
 

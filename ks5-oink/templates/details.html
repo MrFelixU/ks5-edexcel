@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title tal:content="scheme_title">Scheme of Work for Year 7 Set 1</title>
+  <title tal:content="thisascheme/getTitle">Scheme of Work for Year 7 Set 1</title>
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
   <link rel="stylesheet" media="all" href="style.css" type="text/css" />
   <link rel="stylesheet" media="print" href="print.css" type="text/css" />
@@ -13,77 +13,56 @@
 
   <div id="header">
 
-    <ul tal:condition="other_schemes" class="other_schemes">
+    <ul tal:define="aschemes library/getAllocatedSchemes"
+        tal:condition="aschemes"
+        class="other_schemes">
       <li>
         <a href="index.html">Home</a>
       </li>
-      <li tal:repeat="s other_schemes">
-        <a tal:attributes="href s/filename;
-			   class s/selected" tal:content="s/title">Year 8 Set 2</a>
+      <li tal:repeat="ascheme aschemes">
+        <a tal:attributes="href ascheme/getDetailsFileName;
+			                     class python:ascheme is thisascheme and 'selected' or ''"
+           tal:content="as/getTitle">Year 8 Set 2</a>
       </li>
       <p class="discreet">Note: this is the scheme for 2017 to 2018.</p>
     </ul>
 
   </div>
 
-  <h1><span tal:replace="scheme_title">Scheme of Work for Year 7 Set 1</span></h1>
+  <h1>Scheme of Work for <span tal:replace="thisascheme/getTitle">Year 7 Set 1</span></h1>
 
-  <div class="scheme">
-
-    <div tal:condition="cardslink|bookletlink" class="resources">
-      Assessment Resources:
-      <a tal:attributes="href cardslink" tal:condition="cardslink"><img src="graphics/cards-icon-48.png" title="Termly Assessment Cards" /></a>
-      <a tal:attributes="href bookletlink" tal:condition="bookletlink"><img src="graphics/booklet-icon-48.png" title="Assessment Booklet" /></a>
-    </div>
-
-    <div class="halfterm" tal:repeat="ht half_terms">
-      <h2 tal:content="string:${ht/title} (${ht/weeks} weeks)">Autumn 1st Half-Term</h2>
+  <div tal:define="thisscheme thisascheme/scheme"
+       class="scheme">
+    <div class="halfterm" tal:repeat="ht library/half_terms">
+      <h2 tal:content="string:${ht/long_title} (${ht/weeks} weeks)">Autumn 1st Half-Term</h2>
 
       <table class="scheme">
         <thead>
           <tr>
-            <th>unit</th>
-            <th>objectives</th>
-            <th tal:condition="scheme/hasKeywords">key words</th>
+            <th>Unit</th>
+            <th>Objectives</th>
+            <th>Resources</th>
         </thead>
         <tbody>
-          <tr tal:repeat="unit ht/units" tal:attributes="class string:type_${unit/type}">
+          <tr tal:repeat="unit python:thisscheme.getUnitsForHT(ht['num'])"
+              tal:attributes="class string:type_${unit/type}">
             <td class="title">
               <h3 class="unit_id" tal:content="unit/id|nothing">N2</h3>
               <h3 tal:content="unit/title|nothing">Multiples, factors and primes</h3>
-              <p class="scenario" tal:condition="unit/scenario|nothing">
-                Scenario:
-                <span tal:content="item/scenario_title">Building houses</span>
-              </p>
-              <p tal:condition="unit/textbook_files" class="links">
-                Textbook:
-                <a tal:repeat="tf unit/textbook_files" tal:attributes="href tf/path" title="see the textbook pages">[<span tal:content="tf/title">GM2.3</span>]</a>
-              </p>
-              <p tal:condition="unit/textbook_files" class="links">
-                Online:
-                <a tal:repeat="tf unit/textbook_files" tal:attributes="href tf/url" title="see the online resources">[<span tal:content="tf/title">GM2.3</span>]</a>
-              </p>
-              <p tal:condition="unit/testfile" class="links">
-                Test file: <a tal:attributes="href string:assessments/${unit/testfile}" tal:content="unit/testfile">[test.pdf]</a>
-                <a tal:condition="unit/shared_resources_path" tal:attributes="href unit/shared_resources_path">[Shared resources]</a>
-              </p>
             </td>
             <td>
-              <ul tal:condition="unit/objectives">
-                <li tal:repeat="lo unit/objectives" tal:content="structure lo">order decimals</li>
+              <ul tal:condition="unit/getObjectives">
+                <li tal:repeat="lo unit/getObjectives" tal:content="lo">order decimals</li>
               </ul>
             </td>
-            <td tal:condition="scheme/hasKeywords">
-              <span tal:repeat="w unit/getKeywords" class="keyword">
-		            <span	tal:replace="structure w"></span><span tal:condition="not:repeat/w/end" tal:replace="string:,">,</span>
-              </span>
+            <td>
+              <tal:comment tal:condition="null">Pop any resources in here that we've discovered</tal:comment>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
-
 
 </body>
 

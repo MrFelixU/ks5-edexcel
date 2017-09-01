@@ -2,13 +2,12 @@
   CE-specific stuff, making it more generic, and picking up resources
   from a folder as long as they're tagged up or named appropriately
 
+  0 tweak templates for new object-oriented data structures
+
   x load the SchemeUnits.csv to grab all the units to be taught
 
-  - load the objectives into the correct unit objectives
+  x load the objectives into the correct unit objectives
 
-  - load the keywords
-
-  - tweak templates for new object-oriented data structures
 
   - produce scheme, assessment grids (PINS), overview!
 
