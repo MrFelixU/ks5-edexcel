@@ -3,8 +3,152 @@ from simpletal import simpleTALES, simpleTAL
 
 logging.basicConfig(level = logging.INFO, filename="buildschemes.log")
 loginfo = lambda x: logging.info(x)
-
 textmatch = lambda x,y: str(x).lower()==str(y).lower()
+
+
+class SchemeLibrary:
+
+    def __init__(self, config_path = "config"):
+        self.schemes = {}
+        self.config_path = config_path
+
+    def loadSchemes(self):
+        # open up the file with all the units for each scheme
+        _units_path = os.path.join(self.config_path, 'SchemeUnits.csv')
+        for unit_row in csv.DictReader(open(_units_path)):
+            sid = str(unit_row['scheme_id']).lower()
+            if not sid:
+                logging.warn("No scheme id found in this row: "+str(unit_row))
+                continue
+            scheme = self.getScheme(sid)
+            if not scheme:
+                scheme = Scheme(sid)
+                self.addScheme(scheme)
+
+            # let's check if such a file exists first
+            fname = unit_row['file']
+            if not os.path.exists(os.path.join('.',fname)):
+                logging.warn("Could not find a file at ")
+                fname = None
+            scheme.addUnit(
+                unit_row['unit_id'],
+                half_term = int(unit_row['half_term']),
+                unit_type = unit_row['type'],
+                title = unit_row['unit_title'],
+                filename = unit_row['file']
+            )
+        logging.info("After first part of loading, we have " + str(self.schemes) )
+
+        _objectives_path = os.path.join(self.config_path, 'Objectives.csv')
+        for o_row in csv.DictReader(open(_objectives_path)):
+            sid,uid,obj = [o_row[x] for x in ['scheme_id', 'unit_id', 'objective']]
+            if not (sid and uid and obj):
+                continue
+            # let's not bother if we're not actually building this scheme
+            if not self.getScheme(sid):
+                continue
+            s = self.getScheme(sid.lower())
+            u = s.getUnit(uid.lower())
+            u.objectives.append(obj)
+
+        _kw_path = os.path.join(self.config_path, 'Keywords.csv')
+        for o_row in csv.DictReader(open(_kw_path)):
+            sid,uid,kw = [o_row[x] for x in ['scheme_id', 'unit_id', 'keyword']]
+            if not (sid and uid and kw):
+                continue
+            # let's not bother if we're not actually building this scheme
+            if not self.getScheme(sid):
+                continue
+            s = self.getScheme(sid.lower())
+            u = s.getUnit(uid.lower())
+            u.keywords.append(obj)
+
+
+    def addScheme(self, scheme):
+        self.schemes[scheme.id] = scheme
+
+    def getScheme(self, id):
+        return self.schemes.get(id, None)
+
+    def getSchemeIds(self):
+        """Returns a list of all known scheme ids"""
+        return self.schemes.keys()
+
+
+class Scheme:
+
+    def __init__(self, id):
+
+        # how we refer to this scheme
+        self.id = id
+
+        # the actual units as a dictionary { id : unit object }
+        self.units = []
+
+
+    def getUnit(self, id):
+        matches = [u for u in self.units if textmatch(u.id, id)]
+        if len(matches)==1:
+            return matches[0]
+        else:
+            raise "We have a duplicate unit with id %s!" % str(id)
+
+    def addUnit(self, id, title, half_term, unit_type, filename):
+        # check first we don't already have one
+        matches = [u for u in self.units if textmatch(u.id, id)]
+        if len(matches) > 0:
+            raise "We already have unit with the id '%s'" % str(id)
+        self.units.append(SchemeUnit(id, title, half_term, unit_type, filename))
+
+
+    def hasKeywords(self):
+        """Do any of the units in this scheme bother with keywords?
+
+        If not, the template will not want to waste a column on them.
+        """
+        _has_kw = False
+
+        # This is not terribly efficient, but hopefully fool-proof.  We could
+        # set this flag up when the unit is first read in, but if someone
+        # dynamically adds in keywords later, we'd need to beware
+        for (term, units) in self.units_by_ht.items():
+            for u in units:
+                if u.getKeywords():
+                    _has_kw = True
+                    return True
+        return False
+
+
+class SchemeUnit:
+
+    def __init__(self, id, title='', half_term = 0, unit_type='', filename='',
+                 objectives=[], keywords=[]):
+        self.id = id
+        self.title = title
+        self.half_term = half_term
+
+        # the main thing
+        self.objectives = objectives
+
+        # not sure whether this still has a place?
+        self.keywords = keywords
+
+        # we'll try to look for resources related to each unit to list
+        # on the scheme details page
+        self.resource_links = []
+
+
+    def getKeywords(self):
+        return self.keywords
+
+    def getObjectives(self):
+        return self.objectives
+
+
+
+"""
+================= THE ORIGINAL CODE FOLLOWS =================
+"""
 
 
 def __main__():
@@ -41,7 +185,7 @@ def findUnitsForSchemes(units_file = None,
                       csv.DictReader(open(questions_file))
                       if i.get('q',False)]
 
-    # pick up individual objectives and keywords for each assessment
+    # pick up individual objectives and keywords for each unit
     all_los = [lo_row for lo_row in csv.DictReader(open(objectives_file))]
     all_kws = [kw_row for kw_row in csv.DictReader(open(kw_file))]
 
@@ -54,7 +198,7 @@ def findUnitsForSchemes(units_file = None,
         tb = textbook_links.get(str(sid+uid).lower(),[])
         if tb:
             weblink = "http://essentials.cambridge.org/mathematics/%s/%s"
-            
+
         testfile = textmatch(entry['type'],'assess') and entry.get('file',None)
 
         test_questions = []
@@ -118,7 +262,7 @@ def findTextbookLinks(directory="scheme/textbooks"):
                 tb_links_by_siduid[key] = links
     loginfo(str(tb_links_by_siduid))
     return tb_links_by_siduid
-    
+
 
 
 def findSchemeForEachSet(SetsSchemesFileName):
@@ -205,7 +349,7 @@ def writeScheme(units = [],
                 ):
     """Produce the actual HTML file for each set, using the template
     and units given"""
-    
+
     # all the variables for the template will go in here
     glob = {}
 
@@ -225,7 +369,7 @@ def writeScheme(units = [],
               'units' : [u for u in units if str(u['ht']) == ht['half_term'] ],
               }
             )
-        
+
     glob['half_terms']= half_terms
 
 
@@ -257,4 +401,4 @@ def writeScheme(units = [],
     cards_file.close()
 
 
-__main__()
+#__main__()

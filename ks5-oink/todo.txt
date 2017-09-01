@@ -1,5 +1,22 @@
+- strip down the scheme generator, leaving behind the very specific
+  CE-specific stuff, making it more generic, and picking up resources
+  from a folder as long as they're tagged up or named appropriately
+
+  x load the SchemeUnits.csv to grab all the units to be taught
+
+  - load the objectives into the correct unit objectives
+
+  - load the keywords
+
+  - tweak templates for new object-oriented data structures
+
+  - produce scheme, assessment grids (PINS), overview!
+
 - add FAQs and explains HOW TO CONTRIBUTE to the scheme, and HOW to
   manage / update it, in other words some documentation!!
+
+- try out some other schemes, e.g. a KS4 or KS5 one as proof of concept
+
 
 o configure some tests (and projects) to go with the units, display
   and link to them in the scheme
@@ -12,8 +29,6 @@ o configure some tests (and projects) to go with the units, display
   - link up the test / project files / directories - let's look in
     those directories to see if there's anything there, then display a
     link to that directory
-
-- try out some other schemes, e.g. a KS4 or KS5 one as proof of concept
 
 x construct the take-home cards
 
@@ -31,4 +46,3 @@ x an index.html which launches people into the different schemes,
 
 x fix the set markers (broken now that we've done away with set number
   and year number, replaced with titles)
-

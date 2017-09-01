@@ -3,64 +3,73 @@
      PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    <style type="text/css">
+
+<head>
+
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function() {
+      $("#accordion").accordion({
+        active: false,
+        collapsible: true,
+        heading: "h2",
+        heightStyle: "content"
+      });
+    });
+  </script>
+
+  <style type="text/css">
     body {
       font-family: sans-serif;
     }
-    .panel {
-      border: 1px solid #aaa;
-      padding: 1ex;
-      margin: 1ex;
-    }
-    </style>
-    <title>KS5 Schemes of Work and Information</title>
-  </head>
-  <body>
-    <h1>KS5 Schemes of Work and Information</h1>
+  </style>
+  <title>Teach KS5</title>
+</head>
 
-    <div class="section">
-      <h3>Teaching groups 2017-2018</h3>
-      <div class="panel">
-	<ul>
-          <li>12C - FUO and VLH</li>
-          <li>12D - DLF and EK</li>
-          <li>12FM - FUO and EK</li>
-          <li>13C - HL and DM</li>
-          <li>13D - KS and DM</li>
-          <li>13FM - FUO and HL</li>
-	</ul>
-      </div>
+<body>
+  <h1>Teach KS5</h1>
+
+  <div id="accordion">
+
+    <h2>Scheme of Work</h2>
+    <div class="panel">
+      <p>It's <strong>very important</strong> that we cover all the Teaching Points outlined in the exam board's Scheme of Work document.</p>
     </div>
 
-    <div class="section">
-      <h3>What's changed in the new A-level?</h3>
-      <div class="panel">
-      <p><a href="./edexcel-info/SummaryOfChanges2008to2017.pdf">This document</a>
-        outlines what's in and out compared to the outgoing 2008 specification.</p>
-      </div>
+
+
+    <h2>Assessments</h2>
+    <div class="panel">
+      <p>Students will be sitting a "settling in" assessment in the first week of Year 12. They will then sit an assessment at the end of each half-term. Students who do not perform up the expected level will form the intervention group for the following
+        half-term.
+      </p>
     </div>
 
-    <div class="section">
-      <h3>Structure of the A-level course</h3>
-      <div class="panel">
 
-      </div>
 
+    <h2>Teaching groups 2017-2018</h2>
+    <div class="panel">
+      <ul>
+        <li>12C - FUO and VLH</li>
+        <li>12D - DLF and EK</li>
+        <li>12FM - FUO and EK</li>
+        <li>13C - HL and DM</li>
+        <li>13D - KS and DM</li>
+        <li>13FM - FUO and HL</li>
+      </ul>
     </div>
 
-    
-    <div class="section">
-      <h3>Assessments</h3>
-      <div class="panel">
-        <p>Students will be sitting a "settling in" assessment in the first week of Year 12.
-        They will then sit an assessment at the end of each half-term.
-        Students who do not perform up the expected level will form the intervention group
-        for the following half-term.</p>
-      </div>
+    <h2>What's changed in the new A-level?</h2>
+    <div class="panel">
+      <p><a href="./edexcel-info/SummaryOfChanges2008to2017.pdf">This document</a> outlines what's in and out compared to the outgoing 2008 specification.</p>
     </div>
 
-  </body>
+
+  </div>
+
+</body>
+
 </html>
