@@ -15,7 +15,7 @@ class SchemeLibrary:
         self.schemes = {}
 
         # which teaching group will use which scheme?
-        self.groups_schemes = []
+        self.allocated_schemes = []
 
         # what half-terms are we working with?
         self.half_terms = []
@@ -65,7 +65,10 @@ class SchemeLibrary:
             grp,sid = entry['teaching_group'], entry['scheme_id']
             if not (grp and sid):
                 continue
-            self.groups_schemes.append( (grp,sid) )
+            scheme = self.getScheme(sid)
+            if not scheme:
+                raise "Scheme [%s] is not known" % sid
+            self.allocated_schemes.append( AllocatedScheme(grp,scheme) )
 
         _ht_path = os.path.join(self.config_path,'HalfTerms.csv')
         for ht in csv.DictReader(open(_ht_path)):
@@ -95,7 +98,7 @@ class SchemeLibrary:
         return self.schemes.keys()
 
     def getAllocatedSchemes(self):
-        return [AllocatedScheme(g,self.getScheme(sid)) for (g,sid) in self.groups_schemes]
+        return self.allocated_schemes
 
     def writeHTML(self):
         context = simpleTALES.Context(allowPythonPath = 1)

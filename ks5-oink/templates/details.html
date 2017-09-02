@@ -22,7 +22,7 @@
       <li tal:repeat="ascheme aschemes">
         <a tal:attributes="href ascheme/getDetailsFileName;
 			                     class python:ascheme is thisascheme and 'selected' or ''"
-           tal:content="as/getTitle">Year 8 Set 2</a>
+           tal:content="ascheme/getTitle">Year 8 Set 2</a>
       </li>
       <p class="discreet">Note: this is the scheme for 2017 to 2018.</p>
     </ul>
