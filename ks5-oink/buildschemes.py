@@ -35,15 +35,15 @@ class SchemeLibrary:
 
             # let's check if such a file exists first
             fname = unit_row['file']
-            if not os.path.exists(os.path.join('.',fname)):
-                logging.warn("Could not find a file at ")
+            if fname and not os.path.exists(os.path.join(self.output_path, fname)):
+                logging.warn("Could not find a file at %s" % fname)
                 fname = None
             scheme.addUnit(
                 unit_row['unit_id'],
                 half_term = int(unit_row['half_term']),
                 unit_type = unit_row['type'],
                 title = unit_row['unit_title'],
-                filename = unit_row['file']
+                file_path = fname
             )
         logging.info("After first part of loading, we have " + str(self.schemes) )
 
@@ -141,12 +141,12 @@ class Scheme:
         matches = [u for u in self.units if u.half_term == htnum]
         return matches
 
-    def addUnit(self, id, title, half_term, unit_type, filename):
+    def addUnit(self, id, title, half_term, unit_type, file_path):
         # check first we don't already have one
         matches = [u for u in self.units if textmatch(u.id, id)]
         if len(matches) > 0:
             raise "We already have unit with the id '%s'" % str(id)
-        self.units.append(SchemeUnit(id, title, half_term, unit_type, filename))
+        self.units.append(SchemeUnit(id, title, half_term, unit_type, file_path))
 
 class AllocatedScheme:
 
@@ -163,11 +163,13 @@ class AllocatedScheme:
 
 class SchemeUnit:
 
-    def __init__(self, id, title='', half_term = 0, unit_type='', filename='',
+    def __init__(self, id, title='', half_term = 0, unit_type='', file_path='',
                  objectives=[]):
         self.id = id
         self.title = title
         self.half_term = half_term
+        self.unit_type = unit_type
+        self.file_path = file_path
 
         # the main thing
         self._objectives = objectives[:]
