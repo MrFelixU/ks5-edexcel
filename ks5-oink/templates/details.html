@@ -45,10 +45,16 @@
         </thead>
         <tbody>
           <tr tal:repeat="unit python:thisscheme.getUnitsForHT(ht['num'])"
-              tal:attributes="class string:type_${unit/type}">
+              tal:attributes="class string:type_${unit/unit_type}">
             <td class="title">
               <h3 class="unit_id" tal:content="unit/id|nothing">N2</h3>
-              <h3 tal:content="unit/title|nothing">Multiples, factors and primes</h3>
+              <h3><a tal:condition="unit/file_path"
+                     tal:attributes="href unit/file_path|nothing"
+                     title="Click for the full details of this unit"
+                     tal:content="unit/title|unit/id|nothing">Multiples, factors and primes</a>
+                  <span tal:condition="not:unit/file_path"
+                        tal:content="unit/title|nothing">Multiples, factors and primes</span>
+              </h3>
             </td>
             <td>
               <ul tal:condition="unit/getObjectives">
