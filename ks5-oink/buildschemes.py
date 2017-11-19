@@ -67,7 +67,7 @@ class SchemeLibrary:
                 continue
             scheme = self.getScheme(sid)
             if not scheme:
-                raise "Scheme [%s] is not known" % sid
+                raise ValueError("Scheme [%s] is not known" % sid)
             self.allocated_schemes.append( AllocatedScheme(grp,scheme) )
 
         _ht_path = os.path.join(self.config_path,'HalfTerms.csv')
@@ -135,7 +135,7 @@ class Scheme:
         if len(matches)==1:
             return matches[0]
         else:
-            raise "We have a duplicate unit with id %s!" % str(id)
+            raise ValueError("We have a duplicate unit with id %s!" % str(id))
 
     def getUnitsForHT(self, htnum):
         matches = [u for u in self.units if u.half_term == htnum]
@@ -145,7 +145,7 @@ class Scheme:
         # check first we don't already have one
         matches = [u for u in self.units if textmatch(u.id, id)]
         if len(matches) > 0:
-            raise "We already have unit with the id '%s'" % str(id)
+            raise ValueError("We already have unit with the id '%s'" % str(id))
         self.units.append(SchemeUnit(id, title, half_term, unit_type, file_path))
 
 class AllocatedScheme:
