@@ -9,8 +9,8 @@ y12m,2,1stats2,Data presentation and interpretation,learn,edexcel-schemes/m/1sta
 y12m,2,test-ht2,HT2 test ready for Y12 SCE,assess,assessments/maths2017-ht2.docx
 y12m,2,1mech6,Quantities and units in mechanics,learn,edexcel-schemes/m/1mech6.pdf
 y12m,2,1mech7,Kinematics 1 (constant acceleration),learn,edexcel-schemes/m/1mech7.pdf
+y12m,2,1pure4,Trigonometry,learn,edexcel-schemes/m/1pure4.pdf
 y12m,3,test-jan-mock,Mock exam - trimmed AS paper,assess,
-y12m,3,1pure4,Trigonometry,learn,edexcel-schemes/m/1pure4.pdf
 y12m,3,1pure5,Vectors (2D),learn,edexcel-schemes/m/1pure5.pdf
 y12m,3,1stats3,Probability,learn,edexcel-schemes/m/1stats3.pdf
 y12m,3,1stats4,Statistical distributions,learn,edexcel-schemes/m/1stats4.pdf
@@ -30,7 +30,7 @@ y12fm,1,test-ht1,HT1 test - ready for 0123 entry,assess,assessments/fm2017-ht1.d
 y12fm,2,1core3,"Complex numbers (conjugate, division, polynomials)",learn,edexcel-schemes/fm/1core3.pdf
 y12fm,2,1core4,Series,learn,edexcel-schemes/fm/1core4.pdf
 y12fm,2,1core5,Algebra and functions,learn,edexcel-schemes/fm/1core5.pdf
-y12fm,2,test-ht2,"HT2 test (wc27/11), ready for Y12 SCE!",assess,
+y12fm,2,test-ht2,"HT2 test (wc27/11), ready for Y12 SCE!",assess,assessments/fm2017-ht1.docx
 y12fm,2,1core6,Proof by induction,learn,edexcel-schemes/fm/1core6.pdf
 y12fm,2,1core7,Vectors (lines and planes),learn,edexcel-schemes/fm/1core7.pdf
 y12fm,3,test-jan-mock,Mock exam - trimmed AS paper,assess,
