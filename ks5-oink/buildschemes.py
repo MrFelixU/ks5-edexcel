@@ -76,14 +76,11 @@ class SchemeLibrary:
             title = ht['title']
             long_title = ht['long_title']
             code = ht['code']
-            (d,m,y) = [int(x) for x in ht['start_date'].split('/')]
-            start_date = datetime.date(y,m,d)
             weeks = int(ht['weeks'])
             self.half_terms.append( {
                 'num':num,
                 'long_title' : long_title,
                 'code' : code,
-                'start_date' : start_date,
                 'weeks' : weeks
             })
 
