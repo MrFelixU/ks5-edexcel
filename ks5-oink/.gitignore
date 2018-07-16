@@ -1,3 +1,5 @@
 scheme/*.html
 buildschemes.log
+*pyc
+
 
