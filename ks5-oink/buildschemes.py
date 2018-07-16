@@ -429,21 +429,4 @@ def writeScheme(units = [],
     template.expand(context, out_file, outputEncoding="utf-8")
     out_file.close()
 
-    template_file = open("templates/cards.html")
-    template = simpleTAL.compileHTMLTemplate(template_file)
-    template_file.close()
-    cards_filename = out_file_name.replace("scheme-", "cards-")
-    cards_file = open(cards_filename, 'w')
-    template.expand(context, cards_file , outputEncoding="utf-8")
-    cards_file.close()
-
-    template_file = open("templates/booklet.html")
-    template = simpleTAL.compileHTMLTemplate(template_file)
-    template_file.close()
-    cards_filename = out_file_name.replace("scheme-", "booklet-")
-    cards_file = open(cards_filename, 'w')
-    template.expand(context, cards_file , outputEncoding="utf-8")
-    cards_file.close()
-
-
 #__main__()
