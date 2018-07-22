@@ -8,12 +8,14 @@ logging.basicConfig(filename='disintegrate.log',level=logging.DEBUG)
 
 URLBASE = "https://2017.integralmaths.org"
 BASEDIR = "./resources"
-COURSES = (26, 27)
+COURSES = (26, 27, 47, 48, 9, 78, 51, 52, 55)
 
 
 def cleanedHtml(messy_html):
     return tidylib.tidy_document(
-        messy_html, options = {'output-xhtml':True}
+        messy_html, options = {'output-xhtml' : True ,
+                               'input-encoding' : 'utf-8',
+                               'output-encoding' : 'utf-8' }
     )[0]
 
 def _cleanSectionName(thename):
@@ -42,7 +44,7 @@ def getIn():
         logging.debug("Tried to fetch course overview page: "+str(r.url))
 
         logging.debug("Trying to parse minidom")
-        doc = md.parseString(cleanedHtml(r.text))
+        doc = md.parseString(cleanedHtml(r.text).encode('utf-8'))
 
         logging.debug("Looking for sections")
         section_urls = []
@@ -95,7 +97,10 @@ def getIn():
                             outfile.close()
                             
 
-                            
+if __name__ == "__main__":
+    getIn()
+
+    
                             
 
 
