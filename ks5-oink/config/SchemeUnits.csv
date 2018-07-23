@@ -1,29 +1,54 @@
 scheme_id,half_term,unit_id,unit_title,type,file
 y12m,1,test-initial,Settling-in Assessment,assess,assessments/a-level-settling-in-exam-actual.docx
-y12m,1,1pure1,Algebra & Functions,learn,edexcel-schemes/m/1pure1.pdf
+y12m,1,1pure1,"GCSE Algebra, discriminant, sketching curves",learn,edexcel-schemes/m/1pure1.pdf
 y12m,1,1pure2,"Coordinate geometry in the (x, y) plane",learn,edexcel-schemes/m/1pure2.pdf
-y12m,1,test-ht1,HT1 test - ready for 0123 entry,assess,assessments/maths2017-ht1.docx
-y12m,2,1pure3,Further algebra,learn,edexcel-schemes/m/1pure3.pdf
+y12m,1,1pure8,Exponentials & logarithms,learn,edexcel-schemes/m/1pure8.pdf
+y12m,1,test-y12ht1,HT1 test,assess,assessments/maths2017-ht1.docx
+y12m,2,1pure3,"Proofs, factor theorem, binomimal expansion",learn,edexcel-schemes/m/1pure3.pdf
 y12m,2,1stats1,Statistical sampling,learn,edexcel-schemes/m/1stats1.pdf
 y12m,2,1stats2,Data presentation and interpretation,learn,edexcel-schemes/m/1stats2.pdf
 y12m,2,test-ht2,HT2 test ready for Y12 SCE,assess,assessments/maths2017-ht2.docx
 y12m,2,1mech6,Quantities and units in mechanics,learn,edexcel-schemes/m/1mech6.pdf
 y12m,2,1mech7,Kinematics 1 (constant acceleration),learn,edexcel-schemes/m/1mech7.pdf
 y12m,2,1pure4,Trigonometry,learn,edexcel-schemes/m/1pure4.pdf
-y12m,3,test-jan-mock,Mock exam - trimmed AS paper,assess,
+y12m,3,test-jan-y12mock,Mock exam - trimmed AS paper,assess,
 y12m,3,1pure5,Vectors (2D),learn,edexcel-schemes/m/1pure5.pdf
 y12m,3,1stats3,Probability,learn,edexcel-schemes/m/1stats3.pdf
 y12m,3,1stats4,Statistical distributions,learn,edexcel-schemes/m/1stats4.pdf
-y12m,3,test-ht3,HT3 test,assess,
+y12m,3,test-y12ht3,HT3 test,assess,
 y12m,4,1pure6,Differentiation,learn,edexcel-schemes/m/1pure6.pdf
 y12m,4,1pure7,Integration,learn,edexcel-schemes/m/1pure7.pdf
 y12m,4,1stats5,Hypothesis testing,learn,edexcel-schemes/m/1stats5.pdf
-y12m,4,1pure8,Exponentials & logarithms,learn,edexcel-schemes/m/1pure8.pdf
 y12m,4,1mech8,Forces & Newton's laws,learn,edexcel-schemes/m/1mech8.pdf
 y12m,4,1mech9,Kinematics 2 (variable acceleration),learn,edexcel-schemes/m/1mech9.pdf
-y12m,5,test-as,Full AS Paper to determine exam entry,assess,
+y12m,5,test-y12as,Full AS Paper to determine exam entry,assess,
+y12m,6,2pure3,"Functions, domain, range, modulus",learn,edexcel-schemes/m/2pure3.pdf
+y12m,6,2pure4,Sequences and series (AP and GP),learn,edexcel-schemes/m/2pure4.pdf
 ,,,,,
-y12fm,1,test-initial,Settling-in Assessment,assess,assessments/a-level-settling-in-exam-actual.docx
+y13m,1,2pure1,More proofs,learn,edexcel-schemes/m/2pure1.pdf
+y13m,1,2pure2,Partial fractions and algebraic division,learn,edexcel-schemes/m/2pure2.pdf
+y13m,1,2pure5,"Binomial expansion, advanced",learn,edexcel-schemes/m/2pure5.pdf
+y13m,1,2stats1,"Correlation and regression, advanced",learn,edexcel-schemes/m/2stats1.pdf
+y13m,1,test-y13ht1,"HT1 test, ready for 0123 in Oct",assess,
+y13m,1,2mech4,Moments,learn,edexcel-schemes/m/2mech4.pdf
+y13m,2,2pure6,"More trigonometry (radians, identities)",learn,edexcel-schemes/m/2pure6.pdf
+y13m,2,2pure8,"Differentiation, advanced",learn,edexcel-schemes/m/2pure8.pdf
+y13m,2,2stats2,More probability,learn,edexcel-schemes/m/2stats2.pdf
+y13m,2,tets-y13ht2,"HT2 test, late Nov",assess,
+y13m,2,2mech5,"Resolving forces, friction",learn,edexcel-schemes/m/2mech5.pdf
+y13m,,,,,
+y13m,,,,,
+y13m,,,,,
+y13m,,,,,
+y13m,,,,,
+y13m,,,,,
+y13m,,,,,
+y13m,,,,,
+y13m,,,,,
+y13m,,,,,
+y13m,,,,,
+,,,,,
+y12fm,1,test-initial,"Settling-in (same as Maths, higher threshold)",assess,assessments/a-level-settling-in-exam-actual.docx
 y12fm,1,1core1,"Complex numbers (intro, argand, loci)",learn,edexcel-schemes/fm/1core1.pdf
 y12fm,1,1core2,Matrices,learn,edexcel-schemes/fm/1core2.pdf
 y12fm,1,test-ht1,HT1 test - ready for 0123 entry,assess,assessments/fm2017-ht1.docx
@@ -37,11 +62,13 @@ y12fm,3,test-jan-mock,Mock exam - trimmed AS paper,assess,
 y12fm,3,1core8,Calculus (volumes of revolution),learn,edexcel-schemes/fm/1core8.pdf
 y12fm,3,1mech1,Momentum and impulse 1,learn,edexcel-schemes/fm/1mech1.pdf
 y12fm,3,1mech2,"Work, energy and power",learn,edexcel-schemes/fm/1mech2.pdf
-y12fm,3,01-Dec-01,Algorithms and graph theory 1,learn,edexcel-schemes/fm/1dec1.pdf
+y12fm,3,1dec1,Algorithms and graph theory 1,learn,edexcel-schemes/fm/1dec1.pdf
 y12fm,3,test-ht3,HT3 test,assess,
 y12fm,4,1mech3,Elastic collisions,learn,edexcel-schemes/fm/1mech3.pdf
-y12fm,4,01-Dec-02,"Algorithms on graphs (MST, Dijkstra)",learn,edexcel-schemes/fm/1dec2.pdf
-y12fm,4,01-Dec-03,Algorithms on graphs (Route inspection),learn,edexcel-schemes/fm/1dec3.pdf
-y12fm,4,01-Dec-04,Linear programming 1,learn,edexcel-schemes/fm/1dec4.pdf
-y12fm,4,01-Dec-05,Critical path analysis 1,learn,edexcel-schemes/fm/1dec5.pdf
+y12fm,4,1dec2,"Algorithms on graphs (MST, Dijkstra)",learn,edexcel-schemes/fm/1dec2.pdf
+y12fm,4,1dec3,Algorithms on graphs (Route inspection),learn,edexcel-schemes/fm/1dec3.pdf
+y12fm,4,1dec4,Linear programming 1,learn,edexcel-schemes/fm/1dec4.pdf
+y12fm,4,1dec5,Critical path analysis 1,learn,edexcel-schemes/fm/1dec5.pdf
 y12fm,5,test-as,Full AS Paper to determine exam entry,assess,
+y12fm,6,2dec6,Planarity of graphs,learn,edexcel-schemes/fm/2dec6.pdf
+y12fm,6,2core1,"DeMoivre's Theorem, nth complex roots",learn,edexcel-schemes/fm/2core1.pdf
