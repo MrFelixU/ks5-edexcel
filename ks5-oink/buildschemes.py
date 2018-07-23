@@ -131,8 +131,10 @@ class Scheme:
         matches = [u for u in self.units if textmatch(u.id, id)]
         if len(matches)==1:
             return matches[0]
-        else:
+        elif len(matches)>1:
             raise ValueError("We have a duplicate unit with id %s!" % str(id))
+        else:
+            raise ValueError("Could not find unit %s!" % str(id))
 
     def getUnitsForHT(self, htnum):
         matches = [u for u in self.units if u.half_term == htnum]
