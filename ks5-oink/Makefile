@@ -1,10 +1,10 @@
 # all in one now
 
 all:
-	python buildschemes.py
+	python3 buildschemes.py
 
 test:
-	python tests.py
+	python3 tests.py
 
 clean:
 	rm -f buildschemes.log
