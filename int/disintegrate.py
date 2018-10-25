@@ -8,7 +8,8 @@ logging.basicConfig(filename='disintegrate.log',level=logging.DEBUG)
 
 URLBASE = "https://2017.integralmaths.org"
 BASEDIR = "./resources"
-COURSES = (26, 27, 47, 48, 9, 78, 51, 52, 55)
+#COURSES = (26, 27, 47, 48, 9, 78, 51, 52, 55)
+COURSES = (26, )
 
 
 def cleanedHtml(messy_html):
@@ -74,6 +75,8 @@ def getIn():
                 if h3.getAttribute("class") == "sectionname":
                     # clean up the name to make a directory
                     sname = _cleanSectionName(h3.firstChild.data)
+                    if sname.startswith("Large data set"):
+                        continue
                     os.makedirs(
                         os.path.join(BASEDIR,str(courseid),sname),
                         exist_ok = True)
