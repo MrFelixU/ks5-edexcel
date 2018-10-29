@@ -4,9 +4,7 @@ from buildschemes import SchemeLibrary, Scheme, SchemeUnit
 class TestBuildSchemes(unittest.TestCase):
 
     def setUp(self):
-        self.lib = SchemeLibrary(
-            config_path = 'test_config',
-            output_path = 'test_output')
+        self.lib = SchemeLibrary(config_ini_path = 'test_config/settings.ini')
         self.lib.loadSchemes()
 
     def test_loadingSchemes(self):

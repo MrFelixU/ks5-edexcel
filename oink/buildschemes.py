@@ -1,4 +1,4 @@
-import csv, sys, logging, os, os.path, re, datetime
+import csv, sys, logging, os, os.path, re, datetime, configparser
 from simpletal import simpleTALES, simpleTAL
 
 logging.basicConfig(level = logging.DEBUG, filename="buildschemes.log")
@@ -14,9 +14,11 @@ class UnicodeDictReader(csv.DictReader, object):
 
 class SchemeLibrary:
 
-    def __init__(self, config_path = "config", output_path = 'scheme'):
-        self.config_path = config_path
-        self.output_path = output_path
+    def __init__(self, config_ini_path='settings.ini'):
+        config = configparser.ConfigParser()
+        config.read(config_ini_path)
+        self.config_path = config['DEFAULT']['config_folder']
+        self.output_path = config['DEFAULT']['target_folder']
 
         # we'll put the Scheme objects in here
         self.schemes = {}
@@ -201,6 +203,8 @@ class SchemeUnit:
         return self._objectives[:]
 
 if __name__ == "__main__":
-    lib = SchemeLibrary()
+    if len(sys.argv) != 2:
+        raise Exception("I was expecting just one argument with the path of the settings file")
+    lib = SchemeLibrary(config_ini_path = sys.argv[1])
     lib.loadSchemes()
     lib.writeHTML()
