@@ -11,7 +11,7 @@ class TestBuildSchemes(unittest.TestCase):
 
     def test_loadingSchemes(self):
         self.assertEqual(len(self.lib.getSchemeIds()), 2)
-        self.assertEqual(len(self.lib.groups_schemes), 4)
+        self.assertEqual(len(self.lib.getAllocatedSchemes()), 4)
         self.assertEqual(len(self.lib.getScheme('y12m').getUnit('1pure5').getObjectives()),6)
 
     def test_addUnits(self):

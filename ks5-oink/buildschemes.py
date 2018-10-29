@@ -5,7 +5,6 @@ logging.basicConfig(level = logging.DEBUG, filename="buildschemes.log")
 loginfo = lambda x: logging.info(x)
 textmatch = lambda x,y: str(x).lower()==str(y).lower()
 
-
 class UnicodeDictReader(csv.DictReader, object):
 
     def next(self):
@@ -31,68 +30,72 @@ class SchemeLibrary:
     def loadSchemes(self):
         # open up the file with all the units for each scheme
         _units_path = os.path.join(self.config_path, 'SchemeUnits.csv')
-        for unit_row in UnicodeDictReader(open(_units_path)):
-            sid = str(unit_row['scheme_id']).lower()
-            if not sid:
-                logging.warn("No scheme id found in this row: "+str(unit_row))
-                continue
-            scheme = self.getScheme(sid)
-            if not scheme:
-                scheme = Scheme(sid)
-                self.addScheme(scheme)
-                logging.info("Just added scheme [%s]" % sid)
+        with open(_units_path) as units_file:
+            for unit_row in UnicodeDictReader(units_file):
+                sid = str(unit_row['scheme_id']).lower()
+                if not sid:
+                    logging.warning("No scheme id found in this row: "+str(unit_row))
+                    continue
+                scheme = self.getScheme(sid)
+                if not scheme:
+                    scheme = Scheme(sid)
+                    self.addScheme(scheme)
+                    logging.info("Just added scheme [%s]" % sid)
 
-            # let's check if such a file exists first
-            fname = unit_row['file']
-            if fname and not os.path.exists(os.path.join(self.output_path, fname)):
-                logging.warn("Could not find a file at %s" % fname)
-                fname = None
-            scheme.addUnit(
-                unit_row['unit_id'],
-                half_term = int(unit_row['half_term']),
-                unit_type = unit_row['type'],
-                title = unit_row['unit_title'],
-                file_path = fname
-            )
-            logging.info("added unit [%s] to scheme [%s]" % (unit_row['unit_id'],sid))
+                # let's check if such a file exists first
+                fname = unit_row['file']
+                if fname and not os.path.exists(os.path.join(self.output_path, fname)):
+                    logging.warning("Could not find a file at %s" % fname)
+                    fname = None
+                scheme.addUnit(
+                    unit_row['unit_id'],
+                    half_term = int(unit_row['half_term']),
+                    unit_type = unit_row['type'],
+                    title = unit_row['unit_title'],
+                    file_path = fname
+                )
+                logging.info("added unit [%s] to scheme [%s]" % (unit_row['unit_id'],sid))
         logging.info("After first part of loading, we have " + str(self.schemes) )
 
         _objectives_path = os.path.join(self.config_path, 'Objectives.csv')
-        for o_row in UnicodeDictReader(open(_objectives_path)):
-            sid,uid,obj = [o_row[x] for x in ['scheme_id', 'unit_id', 'objective']]
-            if not (sid and uid and obj):
-                continue
-            # let's not bother if we're not actually building this scheme
-            if not self.getScheme(sid):
-                continue
-            s = self.getScheme(sid.lower())
-            u = s.getUnit(uid.lower())
-            u.appendObjective(obj)
-            logging.debug("Adding objective [%s] to scheme [%s] and unit [%s]" % (obj,sid,uid))
+        with open(_objectives_path) as objectives_file:
+            for o_row in UnicodeDictReader(objectives_file):
+                sid,uid,obj = [o_row[x] for x in ['scheme_id', 'unit_id', 'objective']]
+                if not (sid and uid and obj):
+                    continue
+                # let's not bother if we're not actually building this scheme
+                if not self.getScheme(sid):
+                    continue
+                s = self.getScheme(sid.lower())
+                u = s.getUnit(uid.lower())
+                u.appendObjective(obj)
+                logging.debug("Adding objective [%s] to scheme [%s] and unit [%s]" % (obj,sid,uid))
 
         _groups_path = os.path.join(self.config_path, 'SetsSchemes.csv')
-        for entry in UnicodeDictReader(open(_groups_path)):
-            grp,sid = entry['teaching_group'], entry['scheme_id']
-            if not (grp and sid):
-                continue
-            scheme = self.getScheme(sid)
-            if not scheme:
-                raise ValueError("Scheme [%s] is not known" % sid)
-            self.allocated_schemes.append( AllocatedScheme(grp,scheme) )
+        with open(_groups_path) as groups_file:
+            for entry in UnicodeDictReader(groups_file):
+                grp,sid = entry['teaching_group'], entry['scheme_id']
+                if not (grp and sid):
+                    continue
+                scheme = self.getScheme(sid)
+                if not scheme:
+                    raise ValueError("Scheme [%s] is not known" % sid)
+                self.allocated_schemes.append( AllocatedScheme(grp,scheme) )
 
         _ht_path = os.path.join(self.config_path,'HalfTerms.csv')
-        for ht in UnicodeDictReader(open(_ht_path)):
-            num = int(ht['half_term'])
-            title = ht['title']
-            long_title = ht['long_title']
-            code = ht['code']
-            weeks = int(ht['weeks'])
-            self.half_terms.append( {
-                'num':num,
-                'long_title' : long_title,
-                'code' : code,
-                'weeks' : weeks
-            })
+        with open(_ht_path) as ht_file:
+            for ht in UnicodeDictReader(ht_file):
+                num = int(ht['half_term'])
+                title = ht['title']
+                long_title = ht['long_title']
+                code = ht['code']
+                weeks = int(ht['weeks'])
+                self.half_terms.append( {
+                    'num':num,
+                    'long_title' : long_title,
+                    'code' : code,
+                    'weeks' : weeks
+                })
 
     def addScheme(self, scheme):
         self.schemes[scheme.id] = scheme
@@ -172,7 +175,6 @@ class AllocatedScheme:
     def getDetailsFileName(self):
         return "scheme-%s.html" % self.teaching_group.replace(" ","-").lower()
 
-
 class SchemeUnit:
 
     def __init__(self, id, title='', half_term = 0, unit_type='', file_path='',
@@ -198,10 +200,7 @@ class SchemeUnit:
         logging.debug("reporting back [%s], [%d]" % (self.id, len(self._objectives)))
         return self._objectives[:]
 
-
-
 if __name__ == "__main__":
     lib = SchemeLibrary()
     lib.loadSchemes()
     lib.writeHTML()
-

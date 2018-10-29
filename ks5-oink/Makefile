@@ -9,4 +9,5 @@ test:
 clean:
 	rm -f buildschemes.log
 	rm -f scheme/*html
+	rm -f test_output/*.html
 	rm -f *\.pyc
