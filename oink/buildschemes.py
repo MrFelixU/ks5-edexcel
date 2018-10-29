@@ -17,8 +17,20 @@ class SchemeLibrary:
     def __init__(self, config_ini_path='settings.ini'):
         config = configparser.ConfigParser()
         config.read(config_ini_path)
-        self.config_path = config['DEFAULT']['config_folder']
-        self.output_path = config['DEFAULT']['target_folder']
+
+        # here's where the init file lives:
+        base_path = os.path.dirname(config_ini_path)
+
+
+        self.config_path = os.path.join(
+            base_path,
+            config['DEFAULT']['config_folder']
+            )
+
+        self.output_path = os.path.join(
+            base_path,
+            config['DEFAULT']['target_folder']
+            )
 
         # we'll put the Scheme objects in here
         self.schemes = {}
