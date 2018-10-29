@@ -1,3 +1,6 @@
+- re-arrange the directories so that the code is more independent of
+  the actual site-specific stuff
+
 - strip down the scheme generator, leaving behind the very specific
   CE-specific stuff, making it more generic, and picking up resources
   from a folder as long as they're tagged up or named appropriately

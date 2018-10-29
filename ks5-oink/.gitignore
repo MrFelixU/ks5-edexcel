@@ -1,6 +1,5 @@
-#scheme/*.html
+scheme/*.html
 buildschemes.log
 *.pyc
 simpletal/*.pyc
-
-
+test_output/*
