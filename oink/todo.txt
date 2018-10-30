@@ -1,4 +1,6 @@
-- re-arrange the directories so that the code is more independent of
+
+
+x re-arrange the directories so that the code is more independent of
   the actual site-specific stuff
 
 - strip down the scheme generator, leaving behind the very specific
