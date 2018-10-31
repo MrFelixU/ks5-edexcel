@@ -79,6 +79,7 @@ class SchemeLibrary:
                     continue
                 # let's not bother if we're not actually building this scheme
                 if not self.getScheme(sid):
+                    logging.debug("Not bothering to add %s, %s, %s" % (sid,uid,obj))
                     continue
                 s = self.getScheme(sid.lower())
                 u = s.getUnit(uid.lower())

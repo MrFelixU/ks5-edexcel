@@ -1,7 +1,10 @@
 # all in one now
 
-all:
-	python3 buildschemes.py
+#all:
+#	python3 buildschemes.py
+
+ahs:
+	python3 buildschemes.py ../ahsks5sow/config/settings.ini
 
 test:
 	python3 tests.py
