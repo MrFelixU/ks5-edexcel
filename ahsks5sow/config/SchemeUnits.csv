@@ -1,90 +1,90 @@
-scheme_id,half_term,unit_id,unit_title,type,file
-y12m,1,test-initial,Settling-in Assessment,assess,assessments/a-level-settling-in-exam-actual.docx
-y12m,1,1pure1,"GCSE Algebra, discriminant, sketching curves",learn,edexcel-schemes/m/1pure1.pdf
-y12m,1,1pure2,"Coordinate geometry in the (x, y) plane",learn,edexcel-schemes/m/1pure2.pdf
-y12m,1,1pure8,Exponentials & logarithms,learn,edexcel-schemes/m/1pure8.pdf
-y12m,1,test-y12ht1,HT1 test,assess,assessments/maths-y12-ht1.docx
-y12m,2,1pure3,"Proofs, factor theorem, binomimal expansion",learn,edexcel-schemes/m/1pure3.pdf
-y12m,2,1stats1,Statistical sampling,learn,edexcel-schemes/m/1stats1.pdf
-y12m,2,1stats2,Data presentation and interpretation,learn,edexcel-schemes/m/1stats2.pdf
-y12m,2,test-ht2,HT2 test ready for Y12 SCE,assess,assessments/maths-y12-ht2.docx
-y12m,2,1mech6,Quantities and units in mechanics,learn,edexcel-schemes/m/1mech6.pdf
-y12m,2,1mech7,Kinematics 1 (constant acceleration),learn,edexcel-schemes/m/1mech7.pdf
-y12m,2,1pure4,Trigonometry,learn,edexcel-schemes/m/1pure4.pdf
-y12m,3,test-jan-y12mock,Mock exam - trimmed AS paper,assess,assessments/maths-y12-ht3-mock.docx
-y12m,3,1pure5,Vectors (2D),learn,edexcel-schemes/m/1pure5.pdf
-y12m,3,1stats3,Probability,learn,edexcel-schemes/m/1stats3.pdf
-y12m,3,1stats4,Statistical distributions,learn,edexcel-schemes/m/1stats4.pdf
-y12m,4,1pure6,Differentiation,learn,edexcel-schemes/m/1pure6.pdf
-y12m,4,1pure7,Integration,learn,edexcel-schemes/m/1pure7.pdf
-y12m,4,1stats5,Hypothesis testing,learn,edexcel-schemes/m/1stats5.pdf
-y12m,4,1mech8,Forces & Newton's laws,learn,edexcel-schemes/m/1mech8.pdf
-y12m,4,1mech9,Kinematics 2 (variable acceleration),learn,edexcel-schemes/m/1mech9.pdf
-y12m,5,test-y12as,Full AS Paper to determine exam entry,assess,
-y12m,6,2pure3,"Functions, domain, range, modulus",learn,edexcel-schemes/m/2pure3.pdf
-y12m,6,2pure4,Sequences and series (AP and GP),learn,edexcel-schemes/m/2pure4.pdf
-y13m,1,2pure1,More proofs,learn,edexcel-schemes/m/2pure1.pdf
-y13m,1,2pure2,Partial fractions and algebraic division,learn,edexcel-schemes/m/2pure2.pdf
-y13m,1,2pure5,"Binomial expansion, advanced",learn,edexcel-schemes/m/2pure5.pdf
-y13m,1,2stats1,"Correlation and regression, advanced",learn,edexcel-schemes/m/2stats1.pdf
-y13m,1,test-y13ht1,"HT1 test, ready for 0123 in Oct",assess,assessments/maths-y13-ht1.docx
-y13m,1,2mech4,Moments,learn,edexcel-schemes/m/2mech4.pdf
-y13m,1,2mech5,"Resolving forces, friction",learn,edexcel-schemes/m/2mech5.pdf
-y13m,2,2pure6,"More trigonometry (radians, identities)",learn,edexcel-schemes/m/2pure6.pdf
-y13m,2,2stats2,More probability,learn,edexcel-schemes/m/2stats2.pdf
-y13m,2,test-y13ht2,"HT2 test, late Nov",assess,assessments/maths-y13-ht2.docx
-y13m,2,2pure8,"Differentiation, advanced",learn,edexcel-schemes/m/2pure8.pdf
-y13m,2,2mech6,Projectiles,learn,edexcel-schemes/m/2mech6.pdf
-y13m,3,test-y13-mock,January Mock,assess,
-y13m,3,2stats3,Normal distribution,learn,edexcel-schemes/m/2stats3.pdf
-y13m,3,2pure10,Integration of e and ln,learn,edexcel-schemes/m/2pure10.pdf
-y13m,3,2pure11,Integration of harder expressions,learn,edexcel-schemes/m/2pure11.pdf
-y13m,4,2pure9,Numerical methods,learn,edexcel-schemes/m/2pure9.pdf
-y13m,4,2pure7,Parametric equations,learn,edexcel-schemes/m/2pure7.pdf
-y13m,4,2pure12,Vectors in 3D,learn,edexcel-schemes/m/2pure12.pdf
-y13m,4,2mech7,Statics and dynamics,learn,edexcel-schemes/m/2mech7.pdf
-y13m,4,2mech8,Further kinematics,learn,edexcel-schemes/m/2mech8.pdf
-y13m,5,test-apr-mock,Full paper mock,assess,
-y13m,5,2purerev,Mop-up and revise for Papers 1 & 2,learn,
-y13m,5,2appliedrev,Mop-up and revise for Applied Paper,learn,
-y12fm,1,test-initial,"Settling-in (same as Maths, higher threshold)",assess,assessments/a-level-settling-in-exam-actual.docx
-y12fm,1,1core1,"Complex numbers (intro, argand, loci)",learn,edexcel-schemes/fm/1core1.pdf
-y12fm,1,1core2,Matrices,learn,edexcel-schemes/fm/1core2.pdf
-y12fm,1,test-ht1,HT1 test - ready for 0123 entry,assess,assessments/fm-y12-ht1.docx
-y12fm,2,1core3,"Complex numbers (conjugate, division, polynomials)",learn,edexcel-schemes/fm/1core3.pdf
-y12fm,2,1core4,Series,learn,edexcel-schemes/fm/1core4.pdf
-y12fm,2,1core5,Algebra and functions,learn,edexcel-schemes/fm/1core5.pdf
-y12fm,2,test-ht2,"HT2 test (wc27/11), ready for Y12 SCE!",assess,assessments/fm-y12-ht2.docx
-y12fm,2,1core6,Proof by induction,learn,edexcel-schemes/fm/1core6.pdf
-y12fm,2,1core7,Vectors (lines and planes),learn,edexcel-schemes/fm/1core7.pdf
-y12fm,3,test-jan-mock,Mock exam - trimmed AS paper,assess,assessments/fm-y12-ht3-mock.pdf
-y12fm,3,1core8,Calculus (volumes of revolution),learn,edexcel-schemes/fm/1core8.pdf
-y12fm,3,1mech1,Momentum and impulse 1,learn,edexcel-schemes/fm/1mech1.pdf
-y12fm,3,1mech2,"Work, energy and power",learn,edexcel-schemes/fm/1mech2.pdf
-y12fm,3,01-Dec-01,Algorithms and graph theory 1,learn,edexcel-schemes/fm/1dec1.pdf
-y12fm,4,1mech3,Elastic collisions,learn,edexcel-schemes/fm/1mech3.pdf
-y12fm,4,01-Dec-02,"Algorithms on graphs (MST, Dijkstra)",learn,edexcel-schemes/fm/1dec2.pdf
-y12fm,4,01-Dec-03,Algorithms on graphs (Route inspection),learn,edexcel-schemes/fm/1dec3.pdf
-y12fm,4,01-Dec-04,Linear programming 1,learn,edexcel-schemes/fm/1dec4.pdf
-y12fm,4,01-Dec-05,Critical path analysis 1,learn,edexcel-schemes/fm/1dec5.pdf
-y12fm,5,test-as,Full AS Paper to determine exam entry,assess,
-y12fm,6,02-Dec-06,Planarity of graphs,learn,edexcel-schemes/fm/2dec6.pdf
-y12fm,6,2core1,"DeMoivre's Theorem, nth complex roots",learn,edexcel-schemes/fm/2core1.pdf
-y13fm,1,02-Dec-10,Critical path 2: resource histograms and scheduling,learn,edexcel-schemes/fm/2dec10.pdf
-y13fm,1,2mech4,Momentum and impulse in 2D,learn,edexcel-schemes/fm/2mech4.pdf
-y13fm,1,test-y13ht1,"HT1 test, ready for 0123 in Oct",assess,assessments/fm-y13-ht1.docx
-y13fm,2,2core2,Hyperbolic functions,learn,edexcel-schemes/fm/2core2.pdf
-y13fm,2,2core3,Polar co-ordinates,learn,edexcel-schemes/fm/2core3.pdf
-y13fm,2,2mech6,Collisions in 2D,learn,edexcel-schemes/fm/2mech6.pdf
-y13fm,2,02-Dec-07,Floyd's algorithm,learn,edexcel-schemes/fm/2dec7.pdf
-y13fm,2,test-y13ht2,"HT2 test, late Nov",assess,
-y13fm,3,test-y13-mock,January Mock,assess,
-y13fm,3,2core4,"Series: method of differences, Maclaurin",learn,edexcel-schemes/fm/2core4.pdf
-y13fm,3,02-Dec-08,Travelling salesman,learn,edexcel-schemes/fm/2dec8.pdf
-y13fm,3,2mech5,Elasticity,learn,edexcel-schemes/fm/2mech5.pdf
-y13fm,4,2core5,Further calculus,learn,edexcel-schemes/fm/2core5.pdf
-y13fm,4,2core6,Differential equations,learn,edexcel-schemes/fm/2core6.pdf
-y13fm,4,02-Dec-09,"Linear programing, simplex",learn,edexcel-schemes/fm/2dec9.pdf
-y13fm,5,test-apr-mock,Full paper mock,assess,
-y13fm,5,2corerev,Mop-up and revise for Core Papers,learn,
-y13fm,5,2mecdecrev,Mop-up and revise for Mechanics & Decision,learn,
+"scheme_id","half_term","unit_id","unit_title","type","file"
+"y12m",1,"test-initial","Settling-in Assessment","assess","assessments/a-level-settling-in-exam-actual.docx"
+"y12m",1,"1pure1","GCSE Algebra, discriminant, sketching curves","learn","edexcel-schemes/m/1pure1.pdf"
+"y12m",1,"1pure2","Coordinate geometry in the (x, y) plane","learn","edexcel-schemes/m/1pure2.pdf"
+"y12m",1,"1pure8","Exponentials & logarithms","learn","edexcel-schemes/m/1pure8.pdf"
+"y12m",1,"test-y12ht1","HT1 test","assess","assessments/maths-y12-ht1.docx"
+"y12m",2,"1pure3","Proofs, factor theorem, binomimal expansion","learn","edexcel-schemes/m/1pure3.pdf"
+"y12m",2,"1stats1","Statistical sampling","learn","edexcel-schemes/m/1stats1.pdf"
+"y12m",2,"1stats2","Data presentation and interpretation","learn","edexcel-schemes/m/1stats2.pdf"
+"y12m",2,"test-ht2","HT2 test ready for Y12 SCE","assess","assessments/maths-y12-ht2.docx"
+"y12m",2,"1mech6","Quantities and units in mechanics","learn","edexcel-schemes/m/1mech6.pdf"
+"y12m",2,"1mech7","Kinematics 1 (constant acceleration)","learn","edexcel-schemes/m/1mech7.pdf"
+"y12m",2,"1pure4","Trigonometry","learn","edexcel-schemes/m/1pure4.pdf"
+"y12m",3,"test-jan-y12mock","Mock exam - trimmed AS paper","assess","assessments/maths-y12-ht3-mock.docx"
+"y12m",3,"1pure5","Vectors (2D)","learn","edexcel-schemes/m/1pure5.pdf"
+"y12m",3,"1stats3","Probability","learn","edexcel-schemes/m/1stats3.pdf"
+"y12m",3,"1stats4","Statistical distributions","learn","edexcel-schemes/m/1stats4.pdf"
+"y12m",4,"1pure6","Differentiation","learn","edexcel-schemes/m/1pure6.pdf"
+"y12m",4,"1pure7","Integration","learn","edexcel-schemes/m/1pure7.pdf"
+"y12m",4,"1stats5","Hypothesis testing","learn","edexcel-schemes/m/1stats5.pdf"
+"y12m",4,"1mech8","Forces & Newton's laws","learn","edexcel-schemes/m/1mech8.pdf"
+"y12m",4,"1mech9","Kinematics 2 (variable acceleration)","learn","edexcel-schemes/m/1mech9.pdf"
+"y12m",5,"test-y12as","Full AS Paper to determine exam entry","assess",
+"y12m",6,"2pure3","Functions, domain, range, modulus","learn","edexcel-schemes/m/2pure3.pdf"
+"y12m",6,"2pure4","Sequences and series (AP and GP)","learn","edexcel-schemes/m/2pure4.pdf"
+"y13m",1,"2pure1","More proofs","learn","edexcel-schemes/m/2pure1.pdf"
+"y13m",1,"2pure2","Partial fractions and algebraic division","learn","edexcel-schemes/m/2pure2.pdf"
+"y13m",1,"2pure5","Binomial expansion, advanced","learn","edexcel-schemes/m/2pure5.pdf"
+"y13m",1,"2stats1","Correlation and regression, advanced","learn","edexcel-schemes/m/2stats1.pdf"
+"y13m",1,"test-y13ht1","HT1 test, ready for 0123 in Oct","assess","assessments/maths-y13-ht1.docx"
+"y13m",1,"2mech4","Moments","learn","edexcel-schemes/m/2mech4.pdf"
+"y13m",1,"2mech5","Resolving forces, friction","learn","edexcel-schemes/m/2mech5.pdf"
+"y13m",2,"2pure6","More trigonometry (radians, identities)","learn","edexcel-schemes/m/2pure6.pdf"
+"y13m",2,"2pure8","Differentiation, advanced","learn","edexcel-schemes/m/2pure8.pdf"
+"y13m",2,"2stats2","More probability","learn","edexcel-schemes/m/2stats2.pdf"
+"y13m",2,"test-y13ht2","HT2 test, late Nov","assess","assessments/maths-y13-ht2.docx"
+"y13m",2,"2mech6","Projectiles","learn","edexcel-schemes/m/2mech6.pdf"
+"y13m",3,"test-y13-mock","January Mock","assess",
+"y13m",3,"2stats3","Normal distribution","learn","edexcel-schemes/m/2stats3.pdf"
+"y13m",3,"2pure10","Integration of e and ln","learn","edexcel-schemes/m/2pure10.pdf"
+"y13m",3,"2pure11","Integration of harder expressions","learn","edexcel-schemes/m/2pure11.pdf"
+"y13m",4,"2pure9","Numerical methods","learn","edexcel-schemes/m/2pure9.pdf"
+"y13m",4,"2pure7","Parametric equations","learn","edexcel-schemes/m/2pure7.pdf"
+"y13m",4,"2pure12","Vectors in 3D","learn","edexcel-schemes/m/2pure12.pdf"
+"y13m",4,"2mech7","Statics and dynamics","learn","edexcel-schemes/m/2mech7.pdf"
+"y13m",4,"2mech8","Further kinematics","learn","edexcel-schemes/m/2mech8.pdf"
+"y13m",5,"test-apr-mock","Full paper mock","assess",
+"y13m",5,"2purerev","Mop-up and revise for Papers 1 & 2","learn",
+"y13m",5,"2appliedrev","Mop-up and revise for Applied Paper","learn",
+"y12fm",1,"test-initial","Settling-in (same as Maths, higher threshold)","assess","assessments/a-level-settling-in-exam-actual.docx"
+"y12fm",1,"1core1","Complex numbers (intro, argand, loci)","learn","edexcel-schemes/fm/1core1.pdf"
+"y12fm",1,"1core2","Matrices","learn","edexcel-schemes/fm/1core2.pdf"
+"y12fm",1,"test-ht1","HT1 test - ready for 0123 entry","assess","assessments/fm-y12-ht1.docx"
+"y12fm",2,"1core3","Complex numbers (conjugate, division, polynomials)","learn","edexcel-schemes/fm/1core3.pdf"
+"y12fm",2,"1core4","Series","learn","edexcel-schemes/fm/1core4.pdf"
+"y12fm",2,"1core5","Algebra and functions","learn","edexcel-schemes/fm/1core5.pdf"
+"y12fm",2,"test-ht2","HT2 test (wc27/11), ready for Y12 SCE!","assess","assessments/fm-y12-ht2.docx"
+"y12fm",2,"1core6","Proof by induction","learn","edexcel-schemes/fm/1core6.pdf"
+"y12fm",2,"1core7","Vectors (lines and planes)","learn","edexcel-schemes/fm/1core7.pdf"
+"y12fm",3,"test-jan-mock","Mock exam - trimmed AS paper","assess","assessments/fm-y12-ht3-mock.pdf"
+"y12fm",3,"1core8","Calculus (volumes of revolution)","learn","edexcel-schemes/fm/1core8.pdf"
+"y12fm",3,"1mech1","Momentum and impulse 1","learn","edexcel-schemes/fm/1mech1.pdf"
+"y12fm",3,"1mech2","Work, energy and power","learn","edexcel-schemes/fm/1mech2.pdf"
+"y12fm",3,"1dec1","Algorithms and graph theory 1","learn","edexcel-schemes/fm/1dec1.pdf"
+"y12fm",4,"1mech3","Elastic collisions","learn","edexcel-schemes/fm/1mech3.pdf"
+"y12fm",4,"1dec2","Algorithms on graphs (MST, Dijkstra)","learn","edexcel-schemes/fm/1dec2.pdf"
+"y12fm",4,"1dec3","Algorithms on graphs (Route inspection)","learn","edexcel-schemes/fm/1dec3.pdf"
+"y12fm",4,"1dec4","Linear programming 1","learn","edexcel-schemes/fm/1dec4.pdf"
+"y12fm",4,"1dec5","Critical path analysis 1","learn","edexcel-schemes/fm/1dec5.pdf"
+"y12fm",5,"test-as","Full AS Paper to determine exam entry","assess",
+"y12fm",6,"2dec6","Planarity of graphs","learn","edexcel-schemes/fm/2dec6.pdf"
+"y12fm",6,"2core1","DeMoivre's Theorem, nth complex roots","learn","edexcel-schemes/fm/2core1.pdf"
+"y13fm",1,"2dec10","Critical path 2: resource histograms and scheduling","learn","edexcel-schemes/fm/2dec10.pdf"
+"y13fm",1,"2mech4","Momentum and impulse in 2D","learn","edexcel-schemes/fm/2mech4.pdf"
+"y13fm",1,"test-y13ht1","HT1 test, ready for 0123 in Oct","assess","assessments/fm-y13-ht1.docx"
+"y13fm",2,"2core2","Hyperbolic functions","learn","edexcel-schemes/fm/2core2.pdf"
+"y13fm",2,"2core3","Polar co-ordinates","learn","edexcel-schemes/fm/2core3.pdf"
+"y13fm",2,"2mech6","Collisions in 2D","learn","edexcel-schemes/fm/2mech6.pdf"
+"y13fm",2,"2dec7","Floyd's algorithm","learn","edexcel-schemes/fm/2dec7.pdf"
+"y13fm",2,"test-y13ht2","HT2 test, late Nov","assess",
+"y13fm",3,"test-y13-mock","January Mock","assess",
+"y13fm",3,"2core4","Series: method of differences, Maclaurin","learn","edexcel-schemes/fm/2core4.pdf"
+"y13fm",3,"2dec8","Travelling salesman","learn","edexcel-schemes/fm/2dec8.pdf"
+"y13fm",3,"2mech5","Elasticity","learn","edexcel-schemes/fm/2mech5.pdf"
+"y13fm",4,"2core5","Further calculus","learn","edexcel-schemes/fm/2core5.pdf"
+"y13fm",4,"2core6","Differential equations","learn","edexcel-schemes/fm/2core6.pdf"
+"y13fm",4,"2dec9","Linear programing, simplex","learn","edexcel-schemes/fm/2dec9.pdf"
+"y13fm",5,"test-apr-mock","Full paper mock","assess",
+"y13fm",5,"2corerev","Mop-up and revise for Core Papers","learn",
+"y13fm",5,"2mecdecrev","Mop-up and revise for Mechanics & Decision","learn",
