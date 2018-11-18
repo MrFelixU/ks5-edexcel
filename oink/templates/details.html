@@ -7,6 +7,17 @@
   <link rel="stylesheet" media="all" href="style.css" type="text/css" />
   <link rel="stylesheet" media="print" href="print.css" type="text/css" />
   <link rel="icon" href="graphics/favicon.ico" type="image/x-icon" />
+  <script type="text/javascript"
+          src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $("#showoverview").click(function() { $(".objectives").hide(); });
+    $("#showdetails").click(function() { $(".objectives").show(); });
+  }
+  );
+  </script>
+
 </head>
 
 <body class="scheme">
@@ -29,7 +40,15 @@
 
   </div>
 
-  <h1>Scheme of Work for <span tal:replace="thisascheme/getTitle">Year 7 Set 1</span></h1>
+  <h1>
+    <div id="toggleobjectives">
+      <a href="#" id="showoverview">overview</a>
+      |
+      <a href="#" id="showdetails">details</a>
+    </div>
+    Scheme of Work for
+    <span tal:replace="thisascheme/getTitle">Year 7 Set 1</span>
+  </h1>
 
   <div tal:define="thisscheme thisascheme/scheme"
        class="scheme">
@@ -57,7 +76,8 @@
               </h3>
             </td>
             <td>
-              <ul tal:condition="unit/getObjectives">
+              <ul tal:condition="unit/getObjectives"
+                  class="objectives">
                 <li tal:repeat="lo unit/getObjectives" tal:content="lo">order decimals</li>
               </ul>
             </td>

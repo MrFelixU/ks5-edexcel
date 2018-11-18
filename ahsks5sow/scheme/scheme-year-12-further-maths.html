@@ -7,6 +7,16 @@
   <link rel="stylesheet" media="all" href="style.css" type="text/css">
   <link rel="stylesheet" media="print" href="print.css" type="text/css">
   <link rel="icon" href="graphics/favicon.ico" type="image/x-icon">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $("#showoverview").click(function() { $(".objectives").hide(); });
+    $("#showdetails").click(function() { $(".objectives").show(); });
+  }
+  );
+  </script>
+
 </head>
 
 <body class="scheme">
@@ -31,7 +41,15 @@
 
   </div>
 
-  <h1>Scheme of Work for Year 12 Further Maths</h1>
+  <h1>
+    <div id="toggleobjectives">
+      <a href="#" id="showoverview">overview</a>
+      |
+      <a href="#" id="showdetails">details</a>
+    </div>
+    Scheme of Work for
+    Year 12 Further Maths
+  </h1>
 
   <div class="scheme">
     <div class="halfterm">
@@ -66,7 +84,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to solve any quadratic equation with real coefficients</li><li>be able to add, subtract and multiply complex numbers in the form x + iy with x and y real</li><li>understand and use the terms 'real part' and 'imaginary part'</li><li>be able to use and interpret Argand diagrams</li><li>be able to convert between the Cartesian form and the modulus-argument form of a complex number</li><li>be able to multiply and divide complex numbers in modulus-argument form</li><li>be able to construct and interpret simple loci in the Argand diagram such as |z-a|&gt;r  and arg⁡(z-a)=θ</li>
               </ul>
             </td>
@@ -81,7 +99,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to find the dimension of a matrix</li><li>be able to add and subtract matrices of the same dimension</li><li>be able to multiply a matrix by a scalar</li><li>be able to multiply conformable matrices</li><li>be able to calculate determinants of 2×2 and 3×3 matrices</li><li>understand and use singular and non-singular matrices</li><li>be able to know the properties of inverse matrices</li><li>be able to calculate the inverse of non-singular 2×2 and 3×3 matrices</li><li>be able to use matrices and their inverses to solve linear simultaneous equations, including three linear simultaneous equations in three variables</li><li>be able to interpret geometrically the solution and failure of solution of three simultaneous linear equations</li><li>be able to use matrices to represent 2D rotations, reflections, enlargements and translations</li><li>understand and use zero and identity matrices</li><li>be able to use matrix products to represent combinations of transformations</li><li>be able to use matrices to represent linear transformations in three dimensions</li><li>be able to use inverse matrices to reverse the effect of a linear transformation</li><li>be able to use the determinant of a matrix to determine the area scale factor of a transformation</li><li>be able to find invariant points and lines for a linear transformation</li>
               </ul>
             </td>
@@ -123,7 +141,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand and use the complex conjugate of a complex number</li><li>be able to divide two complex numbers by using the complex conjugate of the denominator</li><li>know that non-real roots of polynomial equations with real coefficients occur in conjugate pairs</li><li>be able to solve cubic or quartic equations with real coefficients</li>
               </ul>
             </td>
@@ -138,7 +156,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to use sigma notation</li><li>understand and use formulae for the sums of integers, squares and cubes</li><li>be able to use known formulae to sum more complex series</li>
               </ul>
             </td>
@@ -153,7 +171,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand and use the relationship between roots and coefficients of polynomial equations up to quartic equations</li><li>be able to form a polynomial equation whose roots are a linear transformation of the roots of a given polynomial equation (of at least cubic degree)</li>
               </ul>
             </td>
@@ -181,7 +199,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to obtain a proof for the summation of a series, using induction</li><li>be able to use proof by induction to prove that an expression is divisible by a certain integer</li><li>be able to use mathematical induction to prove general statements involving matrix multiplication</li>
               </ul>
             </td>
@@ -196,7 +214,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>know how to find the vector equation of a line in both two and three dimensions</li><li>understand and use the Cartesian forms of an equation of a straight line in three dimensions</li><li>understand and use the vector and Cartesian forms of the equation of a plane</li><li>be able to find the scalar product of two vectors</li><li>be able to check whether vectors are perpendicular by using the scalar product</li><li>be able to use the scalar product to express the equation of a plane</li><li>be able to use the scalar product to calculate the angle between two lines</li><li>be able to use the scalar product to calculate the angle between two planes</li><li>be able to use the scalar product to calculate the angle between a line and a plane</li><li>be able to find the points of intersection of lines and planes which meet</li><li>be able to calculate the perpendicular distance between two lines</li><li>be able to calculate the perpendicular distance from a point to a line or to a plane</li>
               </ul>
             </td>
@@ -238,7 +256,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to derive formulae for and calculate volumes of revolution about both the x and y-axes</li>
               </ul>
             </td>
@@ -253,7 +271,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand the definitions, derivation, and units of momentum and impulse;</li><li>understand what happens to the momentum of a sphere as a result of a collision;</li><li>use the principle of conservation of momentum applied to direct collisions in 1-dimension.</li>
               </ul>
             </td>
@@ -268,7 +286,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand the derivation, units and definitions of work and energy;</li><li>define kinetic energy (KE);</li><li>understand that work done on a body moving in a horizontal plane is the change in kinetic energy.</li><li>understand the concept of gravitational potential energy (GPE);</li><li>include GPE when applying the work-energy principle;</li><li>know the conditions for conservation of mechanical energy;</li><li>solve problems involving work and energy.</li><li>understand that power in watts is the rate of doing work; </li><li>calculate the power (P) of a vehicle with a tractive (driving) force F, moving with velocity v;</li><li>use the formula P = Fv in problem solving.</li>
               </ul>
             </td>
@@ -283,7 +301,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand what an algorithm is;</li><li>trace an algorithm in the form of a flow chart;</li><li>trace an algorithm given as instructions written in text;</li><li>know how to determine the output of an algorithm and how it links to the input;</li><li>determine the order of a given algorithm and standard network problems.</li><li>know how to apply a bubble sort algorithm to a list of numbers or words;</li><li>know how to apply the quick sort algorithm to a list of numbers or words, clearly identifying the pivots used for each pass;</li><li>identify the number of comparisons and swaps used in a given pass;</li><li>identify size, efficiency and order of an algorithm and use them to make predictions;</li><li>know how to solve bin packing problems using full bin, first fit, and first fit decreasing algorithms, and understand their strengths and weaknesses.</li><li>know the meaning of the vocabulary used in graph theory e.g. degree of a vertex, isomorphic graphs, walks, paths and cycles; </li><li>be familiar with different types of graph e.g. complete, planar, isomorphic, simple, connected; </li><li>understand graphs represented in matrix form;</li><li>be familiar with k notation;</li><li>know the definition of a tree;</li><li>determine if a graph is Eulerian, semi-Eulerian or neither, and find Eulerian cycles.</li>
               </ul>
             </td>
@@ -312,7 +330,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>express the 'compressibility', 'bounciness' or 'elasticity' of an object by a value called the coefficient of restitution (e);</li><li>know that eis between 0 and 1  [and that e = 0 means inelastic and e =1 means perfectly elastic];</li><li>use Newton's (experimental) law of restitution for direct impacts of elastic  spheres;</li><li>calculate the change in kinetic energy due to an impact.</li><li>solve problems of the following types involving elastic impacts:</li><li> successive collisions between pairs of spheres (horizontal motion);</li><li> bouncing ball (off a horizontal elastic plane);</li><li> successive collisions including two spheres and sphere against a wall; </li><li> determination of  number of collisions or deriving the possible range of e. </li>
               </ul>
             </td>
@@ -327,7 +345,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand the meaning of a minimum spanning tree;</li><li>apply Kruskals algorithm to a network to find the minimum spanning tree;</li><li>apply Prims algorithm to a network to find the minimum spanning tree;</li><li>apply Prims algorithm to a distance matrix to find the minimum spanning tree.</li><li>apply Dijkstras algorithm to find the shortest path between two vertices in a network;</li><li>trace back through a network to be able to find the route corresponding to the shortest path;</li><li>consider modifications to an original shortest path problem, for example by dealing with multiple start points or a different end point. </li>
               </ul>
             </td>
@@ -342,7 +360,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>determine whether a graph is traversable;</li><li>apply an algorithm to solve the route inspection problem;</li><li>find a route by inspection;</li><li>understand the importance of the order of vertices of the graph in finding a route.</li>
               </ul>
             </td>
@@ -357,7 +375,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>know how to formulate a linear programming problem from a real-life problem (write inequalities from worded questions);</li><li>form an appropriate objective function to maximise or minimise.</li><li>know how to represent a linear programming problem graphically and identify the feasible region;</li><li>solve linear programming problems to find a maximum or minimum;</li><li>interpret solutions in the context of the original real life problem.</li>
               </ul>
             </td>
@@ -372,7 +390,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>model a project by an activity network from a precedence table;</li><li>complete a precedence table from a given network;</li><li>understand the use of dummies.</li><li>know how to carry out a forward pass and backward pass using early and late event times;</li><li>interpret and use dummies;</li><li>identify critical activities and critical paths.</li><li>know how to determine the total float of activities;</li><li>construct and interpret Gantt (cascade) charts.</li>
               </ul>
             </td>
@@ -428,7 +446,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to apply the planarity algorithm for planar graphs</li><li>be able to determine if a graph contains a Hamiltonian cycle</li>
               </ul>
             </td>
@@ -443,7 +461,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to multiply and divide complex numbers in modulus-argument and exponential form</li><li>know and use cosine and sine in terms of the exponential form</li><li>understand, remember and be able to use de Moivre's theorem: zn = rneinθ = rn(sin nθ + i cos nθ)</li><li>be able to derive multiple angle formulae/expressions e.g. cos 3θ in terms of  powers of cos θ, and sin3 θ in terms of multiple angles of sin θ</li><li>be able to apply de Moivre's theorem to sum a geometric series</li><li>know how to solve completely equations of the form zn - a - ib = 0, giving special attention to cases where a = 1, b = 0</li>
               </ul>
             </td>

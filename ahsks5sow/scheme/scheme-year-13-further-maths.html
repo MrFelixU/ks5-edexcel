@@ -7,6 +7,16 @@
   <link rel="stylesheet" media="all" href="style.css" type="text/css">
   <link rel="stylesheet" media="print" href="print.css" type="text/css">
   <link rel="icon" href="graphics/favicon.ico" type="image/x-icon">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $("#showoverview").click(function() { $(".objectives").hide(); });
+    $("#showdetails").click(function() { $(".objectives").show(); });
+  }
+  );
+  </script>
+
 </head>
 
 <body class="scheme">
@@ -31,7 +41,15 @@
 
   </div>
 
-  <h1>Scheme of Work for Year 13 Further Maths</h1>
+  <h1>
+    <div id="toggleobjectives">
+      <a href="#" id="showoverview">overview</a>
+      |
+      <a href="#" id="showdetails">details</a>
+    </div>
+    Scheme of Work for
+    Year 13 Further Maths
+  </h1>
 
   <div class="scheme">
     <div class="halfterm">
@@ -53,7 +71,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to draw and interpret resource histograms</li><li>be able to level resource histograms</li><li>be able to construct a scheduling diagram</li><li>be able to interpret and modify schedules to meet requirements</li>
               </ul>
             </td>
@@ -68,7 +86,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>extend the definition of linear momentum and impulse to 2-D using vectors.</li><li>use the impulse-momentum principle in vector form i.e. I = mv - mu.</li>
               </ul>
             </td>
@@ -110,7 +128,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>know the definitions of sinh x, cosh x and tanh x including their domains and ranges</li><li>be able to sketch graphs of the hyperbolic functions</li><li>be able to differentiate and integrate the hyperbolic functions and know the standard results</li><li>understand and be able to use the inverse hyperbolic functions including domains and ranges</li><li>be able to derive, use and know the logarithmic forms of the inverse hyperbolic functions</li>
               </ul>
             </td>
@@ -125,7 +143,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand and be able to use polar coordinates and be able to convert between polar and Cartesian coordinates</li><li>know how to sketch standard polar curves</li><li>be able to find tangents parallel and perpendicular to the initial line</li><li>be able to find (compound) areas under polar graphs using the formula 1/2 ∫▒〖r^2 dθ〗</li>
               </ul>
             </td>
@@ -140,7 +158,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand that during an impact the impulse acts perpendicularly to the surface through the centre of the sphere;</li><li>apply Newton's (experimental) law of restitution in the direction of the impulse;</li><li>appreciate that perpendicular to the impulse, the velocity component does not change;</li><li>calculate an angle of deflection;</li><li>calculate the kinetic energy 'lost' in an impact;</li><li>work in speeds and angles or in velocity vectors (i, j).</li><li>understand that, during a collision between two smooth spheres, total momentum is conserved and the impulse acts in the direction of the line of centres;</li><li>apply Newton's (experimental) law of restitution in the direction of the line of centres;</li><li>appreciate that perpendicular to the line of centres, velocity components do not change;</li><li>calculate an angle of deflection;</li><li>calculate the kinetic energy 'lost' in a collision;</li><li>work in speeds and angles or in velocity vectors (i, j).</li>
               </ul>
             </td>
@@ -155,7 +173,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to find all the shortest paths between all the pairs of vertices using Floyd’s algorithm</li>
               </ul>
             </td>
@@ -210,7 +228,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to use the method of differences to sum simple finite series</li><li>be able to find and use higher derivatives of functions</li><li>know how to express functions as an infinite series in ascending powers using Maclaurin's expansion</li><li>be able to find the series expansion of composite functions</li>
               </ul>
             </td>
@@ -225,7 +243,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand the travelling salesman problem and that there is no simple algorithm to solve it for complex networks</li><li>be able to use the nearest neighbour algorithm to find upper bounds for the problem</li><li>be able to find lower bounds for a problem</li><li>understand that not all upper and lower bounds give a solution to the problem</li><li>know how to identify the best upper and lower bounds</li><li>be able to solve the travelling salesman problem and interpret this solution in the context of the problem</li>
               </ul>
             </td>
@@ -240,7 +258,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>investigate the ability of strings to stretch and springs to stretch and compress;</li><li>define the modulus of elasticity (lambda), natural length (a) and extension (x);</li><li>use the above definitions to work out the tension in a stretched string or a stretched/compressed spring i.e. use  Hooke's Law</li><li>derive the elastic potential energy (EPE) from Hooke's Law by applying the work done in stretching a string/spring</li><li>calculate the tension in a string or spring when a system is held in equilibrium;</li><li>include EPE when using the work-energy principle;</li><li>know the conditions for conservation of mechanical energy;</li><li>solve string/spring problems involving work and energy (i.e. KE, GPE and EPE).</li>
               </ul>
             </td>
@@ -269,7 +287,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>know how to deal with infinity as a limit of a definite integral</li><li>be able to integrate functions across limits which include values when the function is undefined i.e. deal with discontinuous integrands</li><li>understand and be able to evaluate the mean value of a function</li><li>be able to integrate functions which can be split into partial fractions up to denominators with quadratic factors</li><li>be able to differentiate inverse trigonometric functions such as 1/2 arctan x2</li><li>know how to integrate functions of the form 〖(a^2- x^2)〗^(-1/2) and 〖(a^2+x^2)〗^(-1) and be able to choose trigonometric substitutions to integrate associated functions</li><li>be able to derive formulae for and calculate volumes of revolution about both the x and y-axes</li><li>be able to find volumes of revolution for functions given in parametric form</li>
               </ul>
             </td>
@@ -284,7 +302,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to identify the form of first order differential equations that can be solved by an integrating factor and carry out the solution</li><li>be able to find general and particular solutions of differential equations of this form</li><li>be able to solve second order differential equations of the form y'' + ay' + by = f(x) where f(x) is a polynomial, exponential or trigonometric function</li><li>be able to find general and particular solutions of second order differential equations of this form</li><li>be able to use differential equations in modelling in kinematics and in other contexts</li><li>be able to solve the equation for simple harmonic motion x ̈=-ω^2 x and relate the solution to the motion</li><li>be able to model damped oscillations using second order differential equations and interpret their solutions</li>
               </ul>
             </td>
@@ -299,7 +317,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand and use slack, surplus and artificial variables</li><li>be able to use slack variables to write inequality constraints as equations</li><li>know how to rewrite LP problems so that each equation contains all the variables x, y, s, and t</li><li>be able to put the information in an initial tableau</li><li>be able to find the pivot and use it to form a new tableau</li><li>be able to identify if a tableau satisfies the optimality condition</li><li>know how to use slack and surplus variables</li><li>understand and be able to use artificial variables</li><li>be able to use the two-stage simplex algorithm</li><li>be able to use the big-M method</li><li>be able to relate the solution to the original problem</li>
               </ul>
             </td>

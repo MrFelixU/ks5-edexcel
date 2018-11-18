@@ -7,6 +7,16 @@
   <link rel="stylesheet" media="all" href="style.css" type="text/css">
   <link rel="stylesheet" media="print" href="print.css" type="text/css">
   <link rel="icon" href="graphics/favicon.ico" type="image/x-icon">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $("#showoverview").click(function() { $(".objectives").hide(); });
+    $("#showdetails").click(function() { $(".objectives").show(); });
+  }
+  );
+  </script>
+
 </head>
 
 <body class="scheme">
@@ -31,7 +41,15 @@
 
   </div>
 
-  <h1>Scheme of Work for Year 13 Maths</h1>
+  <h1>
+    <div id="toggleobjectives">
+      <a href="#" id="showoverview">overview</a>
+      |
+      <a href="#" id="showdetails">details</a>
+    </div>
+    Scheme of Work for
+    Year 13 Maths
+  </h1>
 
   <div class="scheme">
     <div class="halfterm">
@@ -53,7 +71,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand that various types of proof can be used to give confirmation that previously learnt formulae are true, and have a sound mathematical basis</li><li>understand that there are different types of proof and disproof (e.g. deduction and contradiction), and know when it is appropriate to use which particular method</li><li>be able to use an appropriate proof within other areas of the specification later in the course</li>
               </ul>
             </td>
@@ -68,7 +86,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to add, subtract, multiply and divide algebraic fractions</li><li>know how to use the factor theorem to shown a linear expression of the form (a+bx) is a factor of a polynomial</li><li>know how to use the factor theorem for divisors of the form (a+bx)</li><li>be able to simplify algebraic fractions by fully factorising polynomials up to cubic</li><li>be able to split a proper fraction into partial fractions</li><li>be able to split an improper fraction into partial fractions</li>
               </ul>
             </td>
@@ -83,7 +101,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to find the binomial expansion of [(1-x)]^(-1 ) for rational values of n and |x|&lt;1</li><li>be able to find the binomial expansion of [(1+x)]^(n )  for rational values of n and |x|&lt;1</li><li>be able to find the binomial expansion of [(1+bx)]^(n )  for rational values of n and |x|&lt;1/|b| </li><li>be able to find the binomial expansion of [(a+x)]^(n ) for rational values of n and |x|&lt;a</li><li>be able to find the binomial expansion of [(a+bx)]^(n ) for rational values of n and |bx/a| &lt; 1</li><li>know how to use the binomial theorem to find approximations (including roots)</li><li>be able to use partial fractions to write a rational function as a series expansion</li><li>understand the definition of a radian and be able to convert between radians and degrees</li>
               </ul>
             </td>
@@ -98,7 +116,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to change the variable in a regression line</li><li>be able to estimate values from regression line</li><li>understand correlation coefficients</li><li>be able to calculate the PMCC (calculator only)</li><li>be able to interpret a correlation coefficient</li><li>be able to conduct a hypothesis test for a correlation coefficient</li>
               </ul>
             </td>
@@ -126,7 +144,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>realise that a force can produce a turning effect</li><li>know that a moment of a force is given by the formula force x distance giving Nm and know what the sense of a moment is</li><li>understand that the force and distance must be perpendicular to one another</li><li>be able to draw mathematical models to represent horizontal rod problems</li><li>realise what conditions are needed for a system to remain in equilibrium</li><li>be able to solve problems when a bar is on the point of tilting</li>
               </ul>
             </td>
@@ -141,7 +159,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand the language relating to forces</li><li>be able to identify the forces acting on a particle and represent them in a force diagram</li><li>understand how to find the resultant force (magnitude and direction)</li><li>be able to find the resultant of several concurrent forces by vector addition</li><li>be able to resolve a force into components and be able to select suitable directions for resolution</li><li>understand that a rough plane will have an associated frictional force, which opposes relative motion (i.e. the direction of the frictional force is always opposite to how the object is moving or ‘wants’ to move)</li><li>understand that the ‘roughness’ of two surfaces is represented by a value called the coefficient of friction represented by µ</li><li>know that 0 ≤ µ but that there is no theoretical upper limit for µ although for most surfaces it tends to be less than 1 and that a ‘smooth’ surface has a value of µ = 0</li><li>be able to draw force diagrams involving rough surfaces which include the frictional force</li><li>understand and be able to use the formula F ≤ µR</li>
               </ul>
             </td>
@@ -170,7 +188,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>know and be able to use exact values of sin, cos and tan</li><li>be able to derive and use the formulae for arc length and area of sector</li><li>understand and be able to use the standard small angle approximations for sine, cosine and tangent</li><li>understand the secant, cosecant and cotangent functions, and their relationships to sine, cosine and tangent</li><li>be able to sketch the graphs of secant, cosecant and cotangent</li><li>be able to simplify expressions and solve involving sec, cosec and cot</li><li>be able to solve identities involving sec, cosec and cot</li><li>know and be able to use the identities 1 + tan2 x = sec2 x and 1 + cot2 x = cosec2 x to prove other identities and solve equations in degrees and/or radians</li><li>be able to work with the inverse trig functions sin–1, cos–1 and tan–1</li><li>be able to sketch the graphs of sin-1, cos-1 and tan-1</li><li>be able to prove geometrically the following compound angle formulae for sin (A +- B), cos (A +- B) and tan (A +- B)</li><li>be able to use compound angle identities to rearrange expressions or prove other identities</li><li>be able to use compound angle identities to rearrange equations into a different form and then solve</li><li>be able to recall or work out double angle identities</li><li>be able to use double angle identities to rearrange expressions or prove other identities</li><li>be able to use double angle identities to rearrange equations into a different form and then solve</li><li>be able to express [a cos〗⁡[θ+b sin⁡θ 〗 as a single sine or cosine function</li><li>be able to solve equations of the form [a cos][θ+b sin⁡θ]=c in a given interval</li><li>be able to construct proofs involving trigonometric functions and previously learnt identities</li><li>be able to use trigonometric functions to solve problems in context, including problems involving vectors, kinematics and forces</li>
               </ul>
             </td>
@@ -185,7 +203,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand and be able to use probability formulae using set notation</li><li>be able to use tree diagrams, Venn diagrams and two-way tables</li><li>understand and be able to use the conditional probability formula </li><li>be able to model with probability</li><li>be able to critique assumptions made and the likely effect of more realistic assumptions</li>
               </ul>
             </td>
@@ -213,7 +231,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to find the derivative of sin x and cos x from first principles</li><li>be able to differentiate functions involving ex, ln x and related functions such as 6e4x and 5 ln 3x and sketch the graphs of these functions</li><li>be able to differentiate to find equations of tangents and normals to the curve</li><li>be able to differentiate composite functions using the chain rule</li><li>be able to differentiate using the product rule</li><li>be able to differentiate using the quotient rule</li><li>be able to differentiate parametric equations</li><li>be able to find the gradient at a given point from parametric equations</li><li>be able to find the equation of a tangent or normal (parametric)</li><li>be able to use implicit differentiation to differentiate an equation involving two variables</li><li>be able to find the gradient of a curve using implicit differentiation</li><li>be able to verify a given point is stationary (implicit)</li><li>be able to find and identify the nature of stationary points and understand rates of change of gradient</li><li>be able to use a model to find the value after a given time</li><li>be able to set up and use logarithms to solve an equation for an exponential growth or decay problem</li><li>be able to use logarithms to find the base of an exponential</li><li>know how to model the growth or decay of 2D and 3D objects using connected rates of change</li><li>be able to set up a differential equation using given information which may include direct proportion</li>
               </ul>
             </td>
@@ -228,7 +246,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to find the time of flight of a projectile</li><li>be able to find the range and maximum height of a projectile</li><li>be able to derive formulae to find the greatest height, the time of flight and the horizontal range (for a full trajectory)</li><li>know how to modify projectile equations to take account of the height of release</li><li>be able to derive and use the equation of the path</li>
               </ul>
             </td>
@@ -270,7 +288,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand the properties of the Normal distribution</li><li>be able to find probabilities using the Normal distribution</li><li>know the position of the points of inflection of a Normal distribution</li><li>be able to find the mean and variance of a binomial distribution</li><li>understand and be able to apply a continuity correction</li><li>be able to use the Normal distribution as an approximation to the binomial distribution</li><li>be able to conduct a statistical hypothesis test for the mean of the Normal distribution</li><li>be able to interpret the results in context</li>
               </ul>
             </td>
@@ -285,7 +303,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to integrate expressions by inspection using the reverse of differentiation</li><li>be able to integrate xn for all values of n and understand that the integral of 1/x is ln |x|</li><li>be able to integrate expressions by inspection using the reverse of the chain rule (or function of a function)</li><li>be able to integrate trigonometric expressions</li><li>be able to integrate expressions involving ex</li><li>recognise integrals of the form  = ln |f(x)| + c</li><li>be able to use trigonometric identities to manipulate and simplify expressions to a form which can be integrated directly</li>
               </ul>
             </td>
@@ -300,7 +318,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to integrate expressions using an appropriate substitution</li><li>be able to select the correct substitution and justify their choices</li><li>be able to integrate an expression using integration by parts</li><li>be able to select the correct method for integration and justify their choices</li><li>be able to integrate rational expressions by using partial fractions that are linear in the denominator</li><li>be able to simplify the expression using laws of logarithms</li><li>understand and be able to use integration as the limit of a sum</li><li>understand the difference between an indefinite and definite integral and why we do not need + c</li><li>be able to integrate polynomials and other functions to find definite integrals, and use these to find the areas of regions bounded by curves and/or lines</li><li>be able to use a definite integral to find the area under a curve and the area between two curves</li><li>be able to use the trapezium rule to find an approximation to the area under a curve</li><li>appreciate the trapezium rule is an approximation and realise when it gives an overestimate or underestimate</li><li>be able to write a differential equation from a worded problem</li><li>be able to use a differential equation as a model to solve a problem</li><li>be able to solve a differential equation</li><li>be able to substitute the initial conditions or otherwise into the equation to find + c and the general solution</li>
               </ul>
             </td>
@@ -329,7 +347,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to locate roots of f(x) = 0 by considering changes of sign of f(x)</li><li>be able to use numerical methods to find solutions of equations</li><li>understand the principle of iteration</li><li>appreciate the need for convergence in iteration</li><li>be able to use iteration to find terms in a sequence</li><li>be able to sketch cobweb and staircase diagrams</li><li>be able to use cobweb and staircase diagrams to demonstrate convergence or divergence for equations of the form x = g(x)</li><li>be able to solve equations approximately using the Newton-Raphson method</li><li>understand how the Newton-Raphson method works in geometrical terms</li><li>be able to use numerical methods to solve problems in context</li>
               </ul>
             </td>
@@ -344,7 +362,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand the difference between the Cartesian and parametric system of expressing coordinates</li><li>be able to convert between parametric and Cartesian forms</li><li>be able to plot and sketch curves given in parametric form</li><li>recognise some standard curves in parametric form and how they can be used for modelling</li>
               </ul>
             </td>
@@ -359,7 +377,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to extend the work on vectors from AS Pure Mathematics to 3D with column vectors and with the use of i, j and k unit vectors</li><li>be able to calculate the magnitude of a 3D vector</li><li>know the definition of a unit vector in 3D</li><li>be able to add 3D vectors diagrammatically and perform the algebraic operations of vector addition and multiplication by scalars, and understand their geometrical interpretations</li><li>understand and use position vectors, and calculate the distance between two 3D points represented by position vectors</li><li>be able to use vectors to solve problems in pure mathematics and in contexts (e.g. mechanics)</li>
               </ul>
             </td>
@@ -374,7 +392,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>understand that a body is in equilibrium under a set of concurrent (acting through the same point) forces is if their resultant is zero</li><li>know that vectors representing forces in equilibrium form a closed polygon</li><li>understand how to solve problems involving equilibrium of a particle under coplanar forces, including particles on inclined planes and 2D vectors</li><li>be able to solve statics problems for a system of forces which are not concurrent (e.g. ladder problems), thus applying the principle of moments for forces at any angle</li><li>know and understand the meaning of Newton's second law</li><li>be able to formulate the equation of motion for a particle in 1-dimensional motion where the resultant force is mass × acceleration</li><li>be able to formulate the equation of motion for a particle in 2-dimensional motion where the resultant force is mass × acceleration</li><li>be able to formulate and solve separate equations of motion for connected particles, where one of the particles could be on an inclined and/or rough plane</li>
               </ul>
             </td>
@@ -389,7 +407,7 @@
               </h3>
             </td>
             <td>
-              <ul>
+              <ul class="objectives">
                 <li>be able to recognise when the use of constant acceleration formulae is appropriate</li><li>be able to write positions, velocities and accelerations in vector form</li><li>understand the language of kinematics appropriate to motion in 2 dimensions</li><li>be able to find the magnitude and direction of vectors</li><li>be able to extend techniques for motion in 1 dimension to 2 dimensions by using vectors</li><li>know how to use velocity triangles to solve simple problems</li><li>understand and use suvat formulae for constant acceleration in 2D</li><li>know how to apply the equations of motion to i, j vector problems</li><li>be able to use v = u + at , r = ut + 1/2at2  etc. with vectors given in i , j or column vector form</li><li>be able to extend techniques for motion in 1 dimension to 2 dimensions by using calculus and vector versions of equations for variable force/acceleration problems</li><li>understand the language and notation of kinematics appropriate to variable motion in 2 dimensions, i.e. knowing the notation r ̇ and r ̈ for variable acceleration in terms of time</li>
               </ul>
             </td>

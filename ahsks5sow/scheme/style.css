@@ -87,6 +87,20 @@ a.bookletlink
  }
 
 
+/* ********** The overview / details toggles ************** */
+
+#toggleobjectives {
+  float: right;
+  font-size: 50%;
+}
+
+#toggleobjectives a:visited,
+#toggleobjectives a:link {
+  color: #009;
+}
+
+ /* ********** The Links to Other Schemes ************** */
+
 ul.other_schemes
 {
   position: fixed;
