@@ -1,7 +1,7 @@
 import csv, sys, logging, os, os.path, re, datetime, configparser
 from simpletal import simpleTALES, simpleTAL
 
-logging.basicConfig(level = logging.DEBUG, filename="buildschemes.log")
+logging.basicConfig(level = logging.INFO, filename="buildschemes.log")
 loginfo = lambda x: logging.info(x)
 textmatch = lambda x,y: str(x).lower()==str(y).lower()
 
@@ -44,7 +44,7 @@ class SchemeLibrary:
     def loadSchemes(self):
         # open up the file with all the units for each scheme
         _units_path = os.path.join(self.config_path, 'SchemeUnits.csv')
-        with open(_units_path) as units_file:
+        with open(_units_path, encoding="utf-8") as units_file:
             for unit_row in UnicodeDictReader(units_file):
                 sid = str(unit_row['scheme_id']).lower()
                 if not sid:
@@ -72,7 +72,7 @@ class SchemeLibrary:
         logging.info("After first part of loading, we have " + str(self.schemes) )
 
         _objectives_path = os.path.join(self.config_path, 'Objectives.csv')
-        with open(_objectives_path) as objectives_file:
+        with open(_objectives_path, encoding="utf-8") as objectives_file:
             for o_row in UnicodeDictReader(objectives_file):
                 sid,uid,obj = [o_row[x] for x in ['scheme_id', 'unit_id', 'objective']]
                 if not (sid and uid and obj):
@@ -87,7 +87,7 @@ class SchemeLibrary:
                 logging.debug("Adding objective [%s] to scheme [%s] and unit [%s]" % (obj,sid,uid))
 
         _groups_path = os.path.join(self.config_path, 'SetsSchemes.csv')
-        with open(_groups_path) as groups_file:
+        with open(_groups_path, encoding="utf-8") as groups_file:
             for entry in UnicodeDictReader(groups_file):
                 grp,sid = entry['teaching_group'], entry['scheme_id']
                 if not (grp and sid):
@@ -98,7 +98,7 @@ class SchemeLibrary:
                 self.allocated_schemes.append( AllocatedScheme(grp,scheme) )
 
         _ht_path = os.path.join(self.config_path,'HalfTerms.csv')
-        with open(_ht_path) as ht_file:
+        with open(_ht_path, encoding="utf-8") as ht_file:
             for ht in UnicodeDictReader(ht_file):
                 num = int(ht['half_term'])
                 title = ht['title']
@@ -128,20 +128,20 @@ class SchemeLibrary:
     def writeHTML(self):
         context = simpleTALES.Context(allowPythonPath = 1)
         context.addGlobal('library', self)
-        template_file = open("templates/index.html")
+        template_file = open("templates/index.html", encoding="utf-8")
         template = simpleTAL.compileHTMLTemplate(template_file)
         template_file.close()
-        out_file = open(os.path.join(self.output_path, "index.html"), 'w')
+        out_file = open(os.path.join(self.output_path, "index.html"), 'w', encoding="utf-8")
         template.expand(context, out_file, outputEncoding="utf-8")
         out_file.close()
 
         # make a separate details file for each allocated scheme
         for ascheme in self.getAllocatedSchemes():
             context.addGlobal('thisascheme', ascheme)
-            template_file = open("templates/details.html")
+            template_file = open("templates/details.html", encoding="utf-8")
             template = simpleTAL.compileHTMLTemplate(template_file)
             template_file.close()
-            out_file = open(os.path.join(self.output_path, ascheme.getDetailsFileName()), 'w')
+            out_file = open(os.path.join(self.output_path, ascheme.getDetailsFileName()), 'w', encoding="utf-8")
             template.expand(context, out_file, outputEncoding="utf-8")
             out_file.close()
 
