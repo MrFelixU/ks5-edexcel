@@ -1,5 +1,6 @@
 body.scheme
 {
+  font-size: 12pt;
   font-family: sans-serif;
   background: #fff;
   border-style: solid;
@@ -110,7 +111,7 @@ ul.other_schemes
   padding: 0.5ex;
   background: #fff;
   border: 1px solid #ccc;
-  width: 9em;
+  width: 10em;
   text-align: center;
  }
 
